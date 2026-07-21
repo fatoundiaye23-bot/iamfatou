@@ -48,39 +48,8 @@ window.addEventListener("load", () => {
     });
   });
 
-  //animate section 4 stars
-  gsap.to(".wwoman .star:not(.fadeout) svg", {
-    duration: 0.6,
-    delay: window.innerWidth > 768 ? 1 : 0,
-    opacity: 1,
-    ease: "none",
-    scale: 1,
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: ".sec_3",
-      start: "top center-=100",
-      end: "top center-=300",
-      scrub: window.innerWidth > 768 ? true : false,
-    },
-  });
-
-  gsap.to(".star.fadeout svg", {
-    duration: 0.6,
-    delay: window.innerWidth > 768 ? 1 : 0,
-    opacity: 0,
-    ease: "none",
-    scale: 2,
-    filter: "blur(3px)",
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: ".sec_3",
-      start: "top center",
-      end: "top center-=300",
-      scrub: window.innerWidth > 768 ? true : false,
-    },
-  });
-
-  gsap.to(".wwoman span, .ww_symbol svg, .references", {
+  //animate section 4 references
+  gsap.to(".references", {
     duration: 0.6,
     delay: window.innerWidth > 768 ? 1 : 0,
     opacity: 1,
