@@ -907,8 +907,6 @@ body:not(.about_page, .home_page) header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  transform: translateY(300px);
-  opacity: 0;
 }
 .home_page .sec_3 .references .reference {
   width: -moz-max-content;

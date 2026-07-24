@@ -48,22 +48,6 @@ window.addEventListener("load", () => {
     });
   });
 
-  //animate section 4 references
-  gsap.to(".references", {
-    duration: 0.6,
-    delay: window.innerWidth > 768 ? 1 : 0,
-    opacity: 1,
-    ease: "none",
-    y: window.innerWidth < 500 ? 0 : -20,
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: ".sec_3",
-      start: "top center+=100",
-      end: "top top-=200",
-      scrub: window.innerWidth > 768 ? true : false,
-    },
-  });
-
   // if (window.innerWidth > 768) {
   //animate insights
   let insights = gsap.utils.toArray(".single_insight,.pinnedInsight,.pinnedInsight .star");

@@ -113,8 +113,7 @@
   .home_page.animate .text_wrapper .image_wrapper .icons i {
     animation-delay: 0.5s;
   }
-  .home_page .sec_3 .wwoman span,
-  .home_page .sec_3 .references {
+  .home_page .sec_3 .wwoman span {
     transform: translateY(100px);
   }
   .home_page .sec_3 .ww_symbol svg {
