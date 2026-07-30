@@ -927,20 +927,23 @@ body:not(.about_page, .home_page) header {
 }
 .home_page .sec_3 .references {
   margin-top: clamp(27px, 5.9722222222vw, 120px);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  row-gap: 50px;
+  column-gap: 40px;
 }
 .home_page .sec_3 .references .reference {
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .home_page .sec_3 .references .reference img {
-  width: -moz-max-content;
-  width: max-content;
+  width: auto;
+  height: 42px;
+  max-width: 100%;
+  object-fit: contain;
 }
 .home_page .sec_4 {
   padding-top: 200px;

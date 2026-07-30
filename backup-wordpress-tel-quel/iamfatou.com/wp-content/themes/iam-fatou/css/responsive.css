@@ -129,6 +129,7 @@
 @media screen and (max-width: 1050px) {
   .home_page .sec_3 .references {
     margin-top: 50px;
+    grid-template-columns: repeat(4, 1fr);
   }
   .home_page .sec_3 .wwoman span {
     transform: translateY(50px);
@@ -493,6 +494,10 @@
 }
 
 @media screen and (max-width: 500px) {
+
+  .home_page .sec_3 .references {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .expertise_page:is(.speaker, .opinion_leader).animate .hero_section .container .content .current_exp .card.fatou {
     transform: rotate(18deg);
