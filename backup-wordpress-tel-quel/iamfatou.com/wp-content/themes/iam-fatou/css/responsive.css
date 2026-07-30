@@ -33,9 +33,6 @@
   .home_page .sec_2 .content {
     padding-bottom: 50px;
   }
-  .home_page .sec_3 {
-    padding-top: 0;
-  }
 }
 
 @media screen and (max-width: 1250px) {
