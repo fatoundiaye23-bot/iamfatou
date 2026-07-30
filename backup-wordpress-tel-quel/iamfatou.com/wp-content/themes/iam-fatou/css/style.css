@@ -338,10 +338,25 @@ html.lenis {
 .newsletter .newsletter_bottom .right .newsletter_form .form_group .form_control.acceptance input[type=checkbox]:checked {
   background-color: #f7d45a;
 }
+.newsletter .newsletter_bottom .right .newsletter_form .form_submit_row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-top: 20px;
+}
+.newsletter .newsletter_bottom .right .newsletter_form .form_submit_row .btn_label {
+  font-family: OldschoolGroteskMedium;
+  font-weight: normal;
+  font-size: 18px;
+  color: #efe6dd;
+  text-align: right;
+}
 .newsletter .newsletter_bottom .right .newsletter_form .form_submit {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 124px;
   height: 124px;
   border-radius: 50%;
