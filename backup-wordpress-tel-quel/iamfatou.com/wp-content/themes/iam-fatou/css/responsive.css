@@ -128,7 +128,7 @@
 
 @media screen and (max-width: 1050px) {
   .home_page .sec_3 .references {
-    margin-top: 50px;
+    margin-top: 25px;
     grid-template-columns: repeat(4, 1fr);
   }
   .home_page .sec_3 .wwoman span {

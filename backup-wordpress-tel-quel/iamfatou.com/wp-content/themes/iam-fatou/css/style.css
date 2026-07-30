@@ -846,9 +846,9 @@ body:not(.about_page, .home_page) header {
 }
 .home_page .sec_3 {
   background-color: #121921;
-  padding-top: 210px;
+  padding-top: 105px;
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 .home_page .sec_3 .container {
   max-width: clamp(1400px,97vw, 1510px);
@@ -926,7 +926,7 @@ body:not(.about_page, .home_page) header {
   transform: scale(0);
 }
 .home_page .sec_3 .references {
-  margin-top: clamp(27px, 5.9722222222vw, 120px);
+  margin-top: clamp(14px, 2.9861111111vw, 60px);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   justify-items: center;
