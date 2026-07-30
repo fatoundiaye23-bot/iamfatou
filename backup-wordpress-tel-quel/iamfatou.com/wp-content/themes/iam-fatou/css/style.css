@@ -849,6 +849,8 @@ body:not(.about_page, .home_page) header {
   padding-top: 105px;
   position: relative;
   padding-bottom: 100px;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 .home_page .sec_3 .container {
   max-width: clamp(1400px,97vw, 1510px);
