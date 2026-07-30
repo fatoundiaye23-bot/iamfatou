@@ -278,6 +278,15 @@ html.lenis {
   max-width: clamp(650px, 45.1388888889vw, 670px);
   opacity: 0;
 }
+.newsletter .newsletter_header .icon,
+.newsletter .newsletter_header .char,
+.newsletter .newsletter_bottom .left,
+.newsletter .newsletter_bottom .right,
+.newsletter .newsletter_bottom .animate_y,
+.newsletter .newsletter_bottom .animate_x {
+  opacity: 1;
+  transform: none;
+}
 .newsletter .newsletter_bottom .right .newsletter_form {
   display: flex;
   align-items: flex-start;
