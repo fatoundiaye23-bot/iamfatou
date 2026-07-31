@@ -486,6 +486,9 @@ header p .opinion_leader {
 header p .contact {
   color: #e35e37;
 }
+header p .lang_switch {
+  color: #6d14f4;
+}
 header p .blog {
   color: #6d14f4;
 }
