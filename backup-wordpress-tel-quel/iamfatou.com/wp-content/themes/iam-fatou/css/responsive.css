@@ -157,6 +157,13 @@
 	.expertise_page .wonders .exp_desc.badges .right .badge {
 		margin-top: 0px;
 	}
+	.expertise_page .wonders .ventures_accordion .venture_content {
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+	.expertise_page .wonders .ventures_accordion .venture_name {
+		font-size: clamp(18px, 4vw, 22px);
+	}
 	/* .expertise_page .wonders .wonders_cards {
 		    grid-template-columns: repeat(2, 1fr);
 	} */

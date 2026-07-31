@@ -1915,6 +1915,102 @@ body.expertise_page header {
 	  flex-direction: column;
 	  gap: 30px;
 }
+
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion {
+  max-width: 100%;
+  gap: 0;
+  border-top: 1px solid rgba(18, 25, 33, 0.15);
+}
+.expertise_page .wonders .ventures_accordion .venture {
+  border-bottom: 1px solid rgba(18, 25, 33, 0.15);
+}
+.expertise_page .wonders .ventures_accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.expertise_page .wonders .ventures_accordion summary::-webkit-details-marker {
+  display: none;
+}
+.expertise_page .wonders .ventures_accordion .venture_name {
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(20px, 1.6666666667vw, 28px);
+  color: #121921;
+}
+.expertise_page .wonders .ventures_accordion .venture_toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+.expertise_page .wonders .ventures_accordion .venture_toggle::before,
+.expertise_page .wonders .ventures_accordion .venture_toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #121921;
+  transform: translate(-50%, -50%);
+}
+.expertise_page .wonders .ventures_accordion .venture_toggle::before {
+  width: 16px;
+  height: 2px;
+}
+.expertise_page .wonders .ventures_accordion .venture_toggle::after {
+  width: 2px;
+  height: 16px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.expertise_page .wonders .ventures_accordion .venture[open] .venture_toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+.expertise_page .wonders .ventures_accordion .venture_content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding-bottom: 36px;
+}
+.expertise_page .wonders .ventures_accordion .venture_content .article {
+  font-family: OldschoolGroteskRegular;
+  font-weight: 500;
+  font-size: clamp(18px, 1.25vw, 20px);
+  line-height: calc(clamp(18px, 1.25vw, 20px) + 10px);
+  color: #121921;
+  max-width: clamp(674px, 46.8055555556vw, 780px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.expertise_page .wonders .ventures_accordion .venture_content .article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 20px;
+}
+.expertise_page .wonders .ventures_accordion .venture_content .article ul li {
+  position: relative;
+  isolation: isolate;
+  padding-left: 20px;
+}
+.expertise_page .wonders .ventures_accordion .venture_content .article ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.expertise_page .wonders .ventures_accordion .venture_content .badge {
+  flex-shrink: 0;
+  margin-top: 0;
+}
 @media screen and (max-width: 1500px) {
   .expertise_page .wonders .exp_desc .right {
     max-width: 400px;
