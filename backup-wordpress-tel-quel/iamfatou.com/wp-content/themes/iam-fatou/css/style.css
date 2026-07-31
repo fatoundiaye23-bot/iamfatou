@@ -1888,6 +1888,9 @@ body.expertise_page header {
 .expertise_page .wonders .exp_desc .left strong {
   font-family: OldschoolGroteskMedium;
 }
+.expertise_page .wonders .exp_desc .left > :is(h2, h3, h4, h5):first-child {
+  margin-top: 50px;
+}
 
 .expertise_page .wonders .exp_desc .left a {
   text-decoration: underline;
