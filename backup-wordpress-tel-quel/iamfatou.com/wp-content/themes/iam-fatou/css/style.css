@@ -2986,6 +2986,26 @@ footer .wpcf7-form-control-wrap .wpcf7-list-item {
 footer .container {
   max-width: clamp(1395px, 96.875vw, 1430px);
 }
+footer .contact_intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: clamp(600px, 55vw, 820px);
+  margin: 0 auto 70px;
+  text-align: center;
+  font-family: OldschoolGroteskRegular;
+  font-weight: 500;
+  font-size: clamp(16px, 1.1111111111vw, 18px);
+  line-height: calc(clamp(16px, 1.1111111111vw, 18px) + 10px);
+  color: #efe6dd;
+}
+footer .contact_intro a {
+  color: #efe6dd;
+  text-decoration: underline;
+}
+footer .contact_intro em {
+  font-style: italic;
+}
 footer .footer_top {
   display: flex;
   align-items: center;
