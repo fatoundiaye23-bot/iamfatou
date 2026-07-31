@@ -1814,7 +1814,7 @@ body.expertise_page header {
 }
 .expertise_page .wonders {
   background-color: #efe6dd;
-  padding-top: clamp(70px, 9.0277777778vw, 150px);
+  padding-top: clamp(120px, 10vw, 180px);
 }
 .expertise_page .wonders .container {
   max-width: clamp(1134px, 78.75vw, 1400px);
