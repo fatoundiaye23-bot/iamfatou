@@ -1848,6 +1848,19 @@ body.expertise_page header {
   background-color: #000;
 }
 
+.expertise_page .wonders .exp_desc .left .text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.expertise_page .wonders .exp_desc .left .section_label {
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(13px, 0.9722222222vw, 15px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e35e37;
+}
+
 
 .expertise_page .wonders .exp_desc.badges {
 	flex-direction: column;
