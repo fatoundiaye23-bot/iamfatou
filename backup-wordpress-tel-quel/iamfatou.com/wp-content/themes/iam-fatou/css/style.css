@@ -1861,6 +1861,25 @@ body.expertise_page header {
   text-transform: uppercase;
   color: #e35e37;
 }
+.expertise_page .wonders .exp_desc .left .logo_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  row-gap: 30px;
+  column-gap: 24px;
+}
+.expertise_page .wonders .exp_desc .left .logo_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.expertise_page .wonders .exp_desc .left .logo_item img {
+  width: auto;
+  height: 34px;
+  max-width: 100%;
+  object-fit: contain;
+}
 
 
 .expertise_page .wonders .exp_desc.badges {

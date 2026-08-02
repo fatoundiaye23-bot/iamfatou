@@ -164,6 +164,11 @@
 	.expertise_page .wonders .ventures_accordion .venture_name {
 		font-size: clamp(18px, 4vw, 22px);
 	}
+	.expertise_page .wonders .exp_desc .left .logo_grid {
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 24px;
+		column-gap: 16px;
+	}
 	/* .expertise_page .wonders .wonders_cards {
 		    grid-template-columns: repeat(2, 1fr);
 	} */
@@ -500,6 +505,10 @@
 @media screen and (max-width: 500px) {
 
   .home_page .sec_3 .references {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise_page .wonders .exp_desc .left .logo_grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
