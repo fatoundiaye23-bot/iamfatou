@@ -1733,6 +1733,7 @@ body.expertise_page header {
 }
 .expertise_page .hero_section .container .content .current_exp .card {
   position: absolute;
+  top: -60px;
   left: clamp(60px, 6.8055555556vw, 130.6666666667px);
   transform: rotate(0);
   opacity: 0.6;
