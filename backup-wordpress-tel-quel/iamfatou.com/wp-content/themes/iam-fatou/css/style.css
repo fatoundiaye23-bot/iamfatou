@@ -1997,8 +1997,9 @@ body.expertise_page header {
   flex-shrink: 0;
 }
 .expertise_page .wonders .ventures_accordion .venture_name {
-  font-family: OldschoolGroteskMedium;
-  font-size: clamp(20px, 1.6666666667vw, 28px);
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: clamp(16px, 1.1111111111vw, 18px);
   color: #121921;
   flex: 1;
 }
