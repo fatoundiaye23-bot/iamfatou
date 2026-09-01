@@ -1896,6 +1896,7 @@ body.expertise_page header {
 
 .expertise_page .wonders .exp_desc.badges {
 	flex-direction: column;
+	gap: 48px;
 }
 
 .expertise_page .wonders .exp_desc.badges .left{
