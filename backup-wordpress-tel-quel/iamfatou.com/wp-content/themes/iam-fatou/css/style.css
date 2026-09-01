@@ -2042,8 +2042,8 @@ body.expertise_page header {
 .expertise_page .wonders .ventures_accordion .venture_content .article {
   font-family: OldschoolGroteskRegular;
   font-weight: 500;
-  font-size: clamp(18px, 1.25vw, 20px);
-  line-height: calc(clamp(18px, 1.25vw, 20px) + 10px);
+  font-size: clamp(14.5px, 1vw, 16px);
+  line-height: 1.55;
   color: #121921;
   max-width: clamp(674px, 46.8055555556vw, 780px);
   display: flex;
