@@ -4528,3 +4528,67 @@ footer .footer_bottom .copyright {
   color: #6b6459;
 }
 /* Reusable numbered offer cards END */
+
+/* ---------------------------------------------------- */
+/* Offers band: dark showcase panel for bookable talks/services START */
+/* ---------------------------------------------------- */
+.expertise_page .wonders .offers_band {
+  margin-top: 48px;
+  background-color: #121921;
+  border-radius: 20px;
+  padding: clamp(32px, 3.5vw, 48px) clamp(24px, 3vw, 40px);
+}
+.expertise_page .wonders .offers_band .offers_intro {
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+.expertise_page .wonders .offers_band .offers_intro .section_label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(13px, 0.9722222222vw, 15px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f7d45a;
+}
+.expertise_page .wonders .offers_band .offers_intro .section_label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgba(245, 237, 222, 0.18);
+}
+.expertise_page .wonders .offers_band .offers_intro h2 {
+  font-family: Tanker;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #efe6dd;
+  font-size: clamp(28px, 2.4vw, 42px);
+  line-height: 1.1;
+  margin-top: 14px;
+}
+.expertise_page .wonders .offers_band .offers_intro p {
+  font-family: OldschoolGroteskRegular;
+  color: #d7d2c9;
+  font-size: clamp(16px, 1.0416666667vw, 18px);
+  line-height: 1.6;
+  margin-top: 14px;
+}
+.expertise_page .wonders .offers_band .offer_grid {
+  margin-top: 0;
+  background-color: rgba(245, 237, 222, 0.15);
+  border-color: rgba(245, 237, 222, 0.15);
+}
+.expertise_page .wonders .offers_band .offer_card {
+  background-color: #1c2430;
+}
+.expertise_page .wonders .offers_band .offer_card .offer_num {
+  color: #e35e37;
+}
+.expertise_page .wonders .offers_band .offer_card h3 {
+  color: #efe6dd;
+}
+.expertise_page .wonders .offers_band .offer_card p {
+  color: #a8a297;
+}
+/* Offers band END */
