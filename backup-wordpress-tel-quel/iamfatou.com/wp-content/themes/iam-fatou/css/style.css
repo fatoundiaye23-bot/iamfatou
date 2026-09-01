@@ -1852,12 +1852,12 @@ body.expertise_page header {
   background-color: #000;
 }
 
-.expertise_page .wonders .exp_desc .left .text_block {
+.expertise_page .wonders .exp_desc :is(.left, .right) .text_block {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-.expertise_page .wonders .exp_desc .left .section_label {
+.expertise_page .wonders .exp_desc :is(.left, .right) .section_label {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1867,7 +1867,7 @@ body.expertise_page header {
   text-transform: uppercase;
   color: #e35e37;
 }
-.expertise_page .wonders .exp_desc .left .section_label::after {
+.expertise_page .wonders .exp_desc :is(.left, .right) .section_label::after {
   content: "";
   flex: 1;
   height: 1px;
@@ -1999,9 +1999,15 @@ body.expertise_page header {
 .expertise_page .wonders .ventures_accordion .venture_name {
   font-family: OldschoolGroteskBold;
   font-weight: bold;
-  font-size: clamp(16px, 1.1111111111vw, 18px);
+  font-size: clamp(22px, 1.8055555556vw, 30px);
   color: #121921;
   flex: 1;
+}
+/* the École de l'Audace curriculum reuses this component for short numbered
+   steps, not company names, so it stays at body-text scale there */
+.expertise_page .wonders .ventures_accordion.audace_accordion .venture_name {
+  font-family: OldschoolGroteskBold;
+  font-size: clamp(16px, 1.1111111111vw, 18px);
 }
 .expertise_page .wonders .ventures_accordion .venture_toggle {
   position: relative;

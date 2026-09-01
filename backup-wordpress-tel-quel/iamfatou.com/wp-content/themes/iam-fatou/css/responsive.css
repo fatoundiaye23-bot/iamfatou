@@ -164,6 +164,9 @@
 	.expertise_page .wonders .ventures_accordion .venture_name {
 		font-size: clamp(18px, 4vw, 22px);
 	}
+	.expertise_page .wonders .ventures_accordion.audace_accordion .venture_name {
+		font-size: clamp(15px, 3vw, 17px);
+	}
 	.expertise_page .wonders .exp_desc .left .logo_grid {
 		grid-template-columns: repeat(3, 1fr);
 		row-gap: 24px;
