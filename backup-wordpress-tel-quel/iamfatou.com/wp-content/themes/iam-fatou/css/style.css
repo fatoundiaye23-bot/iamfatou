@@ -1972,19 +1972,48 @@ body.expertise_page header {
 .expertise_page .wonders .exp_desc.badges .right.ventures_accordion {
   max-width: 100%;
   gap: 0;
-  border-top: 1px solid rgba(18, 25, 33, 0.15);
+  background-color: #121921;
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .section_label {
+  color: #f7d45a;
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .section_label::after {
+  background-color: rgba(245, 237, 222, 0.18);
 }
 .expertise_page .wonders .ventures_accordion .venture {
-  border-bottom: 1px solid rgba(18, 25, 33, 0.15);
+  border: 1.5px solid rgba(245, 237, 222, 0.28);
+  border-radius: 20px;
+  padding: 0 24px;
+  margin-bottom: 14px;
+}
+.expertise_page .wonders .ventures_accordion .venture:last-child {
+  margin-bottom: 0;
+}
+.expertise_page .wonders .ventures_accordion .venture[open] {
+  border-color: rgba(245, 237, 222, 0.5);
 }
 .expertise_page .wonders .ventures_accordion summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 28px 0;
+  padding: 20px 0;
   cursor: pointer;
   list-style: none;
+}
+.expertise_page .wonders .ventures_accordion .venture_heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.expertise_page .wonders .ventures_accordion .venture_tagline {
+  font-family: OldschoolGroteskRegular;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: #a8a297;
 }
 .expertise_page .wonders .ventures_accordion summary::-webkit-details-marker {
   display: none;
@@ -2044,6 +2073,28 @@ body.expertise_page header {
   align-items: flex-start;
   gap: 60px;
   padding-bottom: 36px;
+}
+/* the ventures list on the Entrepreneur page sits on a dark panel, so its
+   text needs light colors, unlike the curriculum's light-panel instance */
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_name {
+  color: #efe6dd;
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_toggle {
+  border-color: rgba(245, 237, 222, 0.6);
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_toggle::before,
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_toggle::after {
+  background-color: #efe6dd;
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_content .article {
+  color: #d7d2c9;
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_content .article ul li::after {
+  background-color: #e35e37;
+}
+.expertise_page .wonders .exp_desc.badges .right.ventures_accordion .venture_cta {
+  background-color: #f7d45a;
+  color: #121921;
 }
 .expertise_page .wonders .ventures_accordion .venture_content .article {
   font-family: OldschoolGroteskRegular;
