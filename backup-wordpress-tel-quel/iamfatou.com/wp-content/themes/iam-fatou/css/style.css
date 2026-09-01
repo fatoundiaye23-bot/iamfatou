@@ -1825,20 +1825,23 @@ body.expertise_page header {
   /* text-align: center; */
 }
 
-.expertise_page .wonders .exp_desc.no_actions .left ul {
+.expertise_page .wonders .exp_desc.no_actions .left ul,
+.expertise_page .wonders .exp_desc .left .text_block ul {
   padding-left: 35px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.expertise_page .wonders .exp_desc.no_actions .left ul li {
+.expertise_page .wonders .exp_desc.no_actions .left ul li,
+.expertise_page .wonders .exp_desc .left .text_block ul li {
   position: relative;
   isolation: isolate;
   padding-left: 20px;
 }
 
-.expertise_page .wonders .exp_desc.no_actions .left ul li::after {
+.expertise_page .wonders .exp_desc.no_actions .left ul li::after,
+.expertise_page .wonders .exp_desc .left .text_block ul li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1855,11 +1858,20 @@ body.expertise_page header {
   gap: 14px;
 }
 .expertise_page .wonders .exp_desc .left .section_label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-family: OldschoolGroteskMedium;
   font-size: clamp(13px, 0.9722222222vw, 15px);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #e35e37;
+}
+.expertise_page .wonders .exp_desc .left .section_label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgba(18, 25, 33, 0.15);
 }
 .expertise_page .wonders .exp_desc .left .logo_grid {
   display: grid;
@@ -1916,10 +1928,15 @@ body.expertise_page header {
   flex-direction: column;
   gap: 30px;
 }
-.expertise_page .wonders .exp_desc .left h3,
-.expertise_page .wonders .exp_desc .left h2,
 .expertise_page .wonders .exp_desc .left strong {
   font-family: OldschoolGroteskMedium;
+}
+.expertise_page .wonders .exp_desc .left h2,
+.expertise_page .wonders .exp_desc .left h3,
+.expertise_page .wonders .exp_desc .left h5 {
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(26px, 1.9444444444vw, 34px);
+  line-height: 1.2;
 }
 .expertise_page .wonders .exp_desc .left > :is(h2, h3, h4, h5):first-child {
   margin-top: 50px;
@@ -1972,16 +1989,26 @@ body.expertise_page header {
 .expertise_page .wonders .ventures_accordion summary::-webkit-details-marker {
   display: none;
 }
+.expertise_page .wonders .ventures_accordion .venture_num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: clamp(20px, 1.5277777778vw, 26px);
+  color: #e35e37;
+  flex-shrink: 0;
+}
 .expertise_page .wonders .ventures_accordion .venture_name {
   font-family: OldschoolGroteskMedium;
   font-size: clamp(20px, 1.6666666667vw, 28px);
   color: #121921;
+  flex: 1;
 }
 .expertise_page .wonders .ventures_accordion .venture_toggle {
   position: relative;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid #121921;
+  border-radius: 50%;
 }
 .expertise_page .wonders .ventures_accordion .venture_toggle::before,
 .expertise_page .wonders .ventures_accordion .venture_toggle::after {
@@ -1993,12 +2020,12 @@ body.expertise_page header {
   transform: translate(-50%, -50%);
 }
 .expertise_page .wonders .ventures_accordion .venture_toggle::before {
-  width: 16px;
+  width: 12px;
   height: 2px;
 }
 .expertise_page .wonders .ventures_accordion .venture_toggle::after {
   width: 2px;
-  height: 16px;
+  height: 12px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .expertise_page .wonders .ventures_accordion .venture[open] .venture_toggle::after {
@@ -3599,3 +3626,731 @@ footer .footer_bottom .copyright {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ---------------------------------------------------- */
+/* École de l'Audace page START */
+/* ---------------------------------------------------- */
+.audace_page main {
+  background-color: #efe6dd;
+}
+.audace_page .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+  padding: 0 20px;
+}
+/* .wonders is reused for several stacked sections on this page (not just the
+   one right after the hero, like on the other expertise pages), so it needs
+   the page's own standard section rhythm instead of the hero-clearing gap. */
+.audace_page .wonders {
+  padding-top: clamp(70px, 7vw, 100px);
+}
+.audace_page h1, .audace_page h2, .audace_page h3 {
+  font-family: Tanker;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #121921;
+  margin: 0;
+}
+.audace_page .accent { color: #e35e37; }
+
+.audace_page .pill_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: clamp(50px, 3.4vw, 61px);
+  padding: 0 30px;
+  border-radius: 999px;
+  font-family: Tanker;
+  font-size: clamp(15px, 1.05vw, 19px);
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.audace_page .pill_btn:hover { transform: translateY(-2px); }
+.audace_page .pill_btn.primary { background-color: #121921; color: #f7d45a; }
+.audace_page .pill_btn.ghost { border-color: rgba(18,25,33,0.35); color: #121921; }
+.audace_page .pill_btn.ghost:hover { border-color: #121921; background: rgba(18,25,33,0.06); }
+
+.audace_page .text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 70ch;
+}
+.audace_page .text_block .section_label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(13px, 0.9722222222vw, 15px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e35e37;
+}
+.audace_page .text_block .section_label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgba(18, 25, 33, 0.15);
+}
+.audace_page .text_block.on_ink .section_label::after {
+  background-color: rgba(245, 237, 222, 0.18);
+}
+.audace_page .text_block h2 {
+  font-size: clamp(28px, 2.6vw, 44px);
+  line-height: 1.05;
+}
+.audace_page .text_block p {
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(16px, 1.05vw, 18px);
+  line-height: 1.6;
+  color: #121921;
+}
+.audace_page .text_block.on_ink .section_label { color: #f7d45a; }
+.audace_page .text_block.on_ink h2 { color: #efe6dd; }
+.audace_page .text_block.on_ink p { color: #d7d2c9; }
+
+/* ---- hero ---- */
+.audace_page .audace_hero {
+  padding-top: clamp(135px, 12vw, 230px);
+  padding-bottom: clamp(50px, 5vw, 90px);
+}
+.audace_page .audace_hero_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.audace_page .audace_hero_text { max-width: 640px; }
+.audace_page .hero_eyebrow {
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(12px, 0.9vw, 14px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e35e37;
+  margin-bottom: 20px;
+}
+.audace_page .audace_hero h1 {
+  font-size: clamp(32px, 3.6vw, 58px);
+  line-height: 1.04;
+}
+.audace_page .audace_hero_sub {
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(16px, 1.1vw, 18.5px);
+  line-height: 1.6;
+  color: #121921;
+  margin-top: 22px;
+  max-width: 54ch;
+}
+.audace_page .audace_ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+.audace_page .audace_meta_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(18,25,33,0.15);
+}
+.audace_page .audace_meta_row div {
+  font-family: OldschoolGroteskMedium;
+  font-size: 14px;
+  color: #121921;
+}
+.audace_page .audace_meta_row span {
+  display: block;
+  font-family: OldschoolGroteskRegular;
+  font-size: 12px;
+  color: #6b6459;
+  margin-bottom: 3px;
+}
+.audace_page .audace_hero_visual { position: relative; flex-shrink: 0; }
+.audace_page .audace_photo_card {
+  background-color: #e35e37;
+  border-radius: 8px;
+  padding: 12px;
+  transform: rotate(3deg);
+}
+.audace_page .audace_photo_card img {
+  display: block;
+  width: min(320px, 62vw);
+  border-radius: 3px;
+  object-fit: cover;
+}
+.audace_page .audace_badge {
+  position: absolute;
+  left: -20px;
+  bottom: 22px;
+  max-width: 165px;
+  background-color: #f7d45a;
+  color: #121921;
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 12.5px;
+  line-height: 1.3;
+  transform: rotate(-6deg);
+  box-shadow: 0 18px 40px rgba(18,25,33,0.22);
+}
+
+/* ---- credibility strip ---- */
+.audace_page .audace_strip {
+  background-color: #121921;
+  padding: 26px 0;
+}
+.audace_page .audace_strip_inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.audace_page .strip_label {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8f8a80;
+  margin-right: 6px;
+}
+.audace_page .strip_chip {
+  font-family: OldschoolGroteskMedium;
+  font-size: 14px;
+  color: #efe6dd;
+}
+.audace_page .strip_dot { color: #6b6459; }
+
+/* ---- manifesto ---- */
+.audace_page .audace_manifesto {
+  padding: clamp(60px, 7vw, 100px) 0;
+}
+.audace_page .audace_manifesto_inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 50px;
+  align-items: center;
+}
+.audace_page .audace_manifesto blockquote {
+  margin: 0;
+  font-family: Tanker;
+  text-transform: uppercase;
+  font-size: clamp(28px, 2.7vw, 42px);
+  line-height: 1.08;
+  color: #121921;
+}
+.audace_page .audace_manifesto cite {
+  display: block;
+  margin-top: 18px;
+  font-style: normal;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: #6b6459;
+}
+.audace_page .audace_manifesto_copy p {
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(16px, 1.1vw, 18px);
+  line-height: 1.65;
+  color: #121921;
+  max-width: 56ch;
+}
+.audace_page .audace_manifesto_copy p + p { margin-top: 16px; }
+.audace_page .steps_row {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.audace_page .steps_row span {
+  font-family: OldschoolGroteskMedium;
+  font-size: 12.5px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: #fff;
+  color: #121921;
+}
+
+/* ---- objectifs grid ---- */
+.audace_page .obj_grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: rgba(18,25,33,0.12);
+  border: 1px solid rgba(18,25,33,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.audace_page .obj_card {
+  background-color: #efe6dd;
+  padding: 30px 26px;
+  min-height: 190px;
+}
+.audace_page .obj_card .obj_num {
+  font-family: Tanker;
+  font-size: 30px;
+  color: #e35e37;
+  display: block;
+}
+.audace_page .obj_card h3 {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 17px;
+  margin-top: 10px;
+}
+.audace_page .obj_card p {
+  font-family: OldschoolGroteskRegular;
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #6b6459;
+}
+
+/* ---- format & methodes ---- */
+.audace_page .audace_format {
+  background-color: #121921;
+  padding: clamp(70px, 7vw, 100px) 0;
+}
+.audace_page .format_grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 36px;
+}
+.audace_page .breakdown_row {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 18px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(245,237,222,0.15);
+  align-items: baseline;
+}
+.audace_page .breakdown_row:last-child { border-bottom: 1px solid rgba(245,237,222,0.15); }
+.audace_page .breakdown_row .hrs {
+  font-family: Tanker;
+  font-size: 24px;
+  color: #f7d45a;
+}
+.audace_page .breakdown_row h4 {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 15.5px;
+  color: #efe6dd;
+  margin: 0;
+}
+.audace_page .breakdown_row p {
+  font-family: OldschoolGroteskRegular;
+  margin-top: 4px;
+  font-size: 13.8px;
+  color: #a8a297;
+  line-height: 1.5;
+}
+.audace_page .format_side {
+  background-color: #1c2430;
+  border: 1px solid rgba(245,237,222,0.15);
+  border-radius: 16px;
+  padding: 30px;
+  align-self: start;
+}
+.audace_page .format_total {
+  font-family: Tanker;
+  font-size: 46px;
+  color: #efe6dd;
+  line-height: 1;
+}
+.audace_page .format_total small {
+  display: block;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a8a297;
+  margin-top: 10px;
+}
+.audace_page .format_divider {
+  height: 1px;
+  background-color: rgba(245,237,222,0.15);
+  margin: 22px 0;
+}
+.audace_page .format_facts { display: flex; flex-direction: column; gap: 12px; }
+.audace_page .format_facts .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 14px;
+  color: #efe6dd;
+}
+.audace_page .format_facts .row b { color: #f7d45a; }
+
+/* ---- curriculum accordion (reuses .ventures_accordion) ---- */
+.audace_page .audace_curriculum .eval_note {
+  margin-top: 34px;
+  padding: 22px 24px;
+  border-radius: 14px;
+  background-color: #f2e9d8;
+  font-family: OldschoolGroteskRegular;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #121921;
+}
+.audace_page .audace_curriculum .eval_note b { font-family: OldschoolGroteskBold; }
+
+/* ---- 7 commandements ---- */
+.audace_page .audace_commandements {
+  background-color: #121921;
+  padding: clamp(70px, 7vw, 100px) 0 40px;
+}
+.audace_page .audace_cmd_container { overflow: visible; }
+.audace_page .cmd_scroll {
+  margin-top: 42px;
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+.audace_page .cmd_card {
+  flex: 0 0 auto;
+  width: 260px;
+  background-color: #1c2430;
+  border: 1px solid rgba(245,237,222,0.15);
+  border-radius: 18px;
+  padding: 26px 24px;
+}
+.audace_page .cmd_card .cmd_num {
+  font-family: Tanker;
+  font-size: 40px;
+  color: #e35e37;
+}
+.audace_page .cmd_card h3 {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 17px;
+  color: #efe6dd;
+  margin-top: 6px;
+}
+.audace_page .cmd_card p {
+  font-family: OldschoolGroteskRegular;
+  margin-top: 12px;
+  font-size: 13.8px;
+  line-height: 1.55;
+  color: #a8a297;
+}
+.audace_page .cmd_card .tip_label {
+  display: block;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #f7d45a;
+  text-transform: uppercase;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+/* ---- fatou bio ---- */
+.audace_page .audace_fatou_grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+}
+.audace_page .audace_fatou_photos { position: relative; display: flex; justify-content: center; padding-bottom: 30px; }
+.audace_page .audace_photo_card.a { background-color: #f7d45a; transform: rotate(-4deg); }
+.audace_page .audace_photo_card.a img { width: min(280px, 68vw); }
+.audace_page .audace_photo_card.b {
+  background-color: #efe6dd;
+  border: 2px solid #121921;
+  transform: rotate(7deg);
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+}
+.audace_page .audace_photo_card.b img { width: 140px; }
+.audace_page .audace_fatou_bio p {
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(16px, 1.1vw, 18px);
+  line-height: 1.65;
+  color: #121921;
+  max-width: 60ch;
+}
+.audace_page .audace_fatou_bio p + p { margin-top: 14px; }
+.audace_page .audace_chips { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 9px; }
+.audace_page .audace_chips .chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 12.5px;
+  border: 1.5px solid #e35e37;
+  color: #e35e37;
+  white-space: nowrap;
+}
+.audace_page .contrast_grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(18,25,33,0.12);
+}
+.audace_page .contrast_col { padding: 32px 30px; }
+.audace_page .contrast_col.dim { background-color: #f2e9d8; }
+.audace_page .contrast_col.bright { background-color: #121921; color: #efe6dd; }
+.audace_page .contrast_col h4 {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+}
+.audace_page .contrast_col.dim h4 { color: #6b6459; }
+.audace_page .contrast_col.bright h4 { color: #f7d45a; }
+.audace_page .contrast_col ul { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.audace_page .contrast_col li {
+  font-family: OldschoolGroteskMedium;
+  font-size: 15px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.4;
+}
+.audace_page .contrast_col.dim li::before { content: "\2013"; position: absolute; left: 0; color: #6b6459; }
+.audace_page .contrast_col.bright li::before { content: "+"; position: absolute; left: 0; color: #e35e37; font-family: OldschoolGroteskBold; }
+
+/* ---- atouts ---- */
+.audace_page .atouts_grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.audace_page .atout_card {
+  padding: 26px 24px;
+  border-radius: 14px;
+  background-color: #f2e9d8;
+}
+.audace_page .atout_card p {
+  font-family: OldschoolGroteskRegular;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #121921;
+}
+.audace_page .atout_card b { font-family: OldschoolGroteskBold; }
+
+/* ---- infos pratiques ---- */
+.audace_page .audace_infos {
+  background-color: #121921;
+  padding: clamp(70px, 7vw, 100px) 0;
+}
+.audace_page .infos_grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: rgba(245,237,222,0.15);
+  border: 1px solid rgba(245,237,222,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.audace_page .info_cell { background-color: #1c2430; padding: 26px 24px; }
+.audace_page .info_cell .label {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a8a297;
+}
+.audace_page .info_cell .value {
+  margin-top: 8px;
+  font-family: Tanker;
+  font-size: 23px;
+  color: #efe6dd;
+  line-height: 1.1;
+}
+.audace_page .info_cell .sub {
+  margin-top: 6px;
+  font-family: OldschoolGroteskRegular;
+  font-size: 13px;
+  color: #a8a297;
+  line-height: 1.5;
+}
+
+/* ---- final cta / waitlist ---- */
+.audace_page .audace_final_cta {
+  background-color: #e35e37;
+  padding: clamp(70px, 7vw, 100px) 0;
+}
+.audace_page .audace_final_cta_inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.audace_page .audace_final_cta h2 {
+  font-size: clamp(32px, 4.2vw, 56px);
+  color: #121921;
+}
+.audace_page .audace_final_cta p {
+  margin-top: 16px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 16px;
+  max-width: 52ch;
+  color: rgba(18,25,33,0.82);
+}
+.audace_page .audace_waitlist_form {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.audace_page .audace_waitlist_form input[type="email"] {
+  height: clamp(50px, 3.4vw, 61px);
+  min-width: 280px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 2px solid #121921;
+  background-color: #efe6dd;
+  font-family: OldschoolGroteskMedium;
+  font-size: 15px;
+  color: #121921;
+}
+.audace_page .audace_waitlist_form input[type="email"]::placeholder { color: #6b6459; }
+.audace_page .audace_contact {
+  margin-top: 30px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 13px;
+  color: rgba(18,25,33,0.75);
+}
+.audace_page .audace_contact a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  .audace_page .audace_hero_inner { flex-direction: column; align-items: flex-start; }
+  .audace_page .audace_hero_visual { align-self: center; }
+  .audace_page .audace_manifesto_inner { grid-template-columns: 1fr; }
+  .audace_page .format_grid { grid-template-columns: 1fr; }
+  .audace_page .audace_fatou_grid { grid-template-columns: 1fr; }
+  .audace_page .obj_grid { grid-template-columns: repeat(2, 1fr); }
+  .audace_page .infos_grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 640px) {
+  .audace_page .obj_grid { grid-template-columns: 1fr; }
+  .audace_page .infos_grid { grid-template-columns: 1fr; }
+  .audace_page .atouts_grid { grid-template-columns: 1fr; }
+  .audace_page .contrast_grid { grid-template-columns: 1fr; }
+  .audace_page .audace_waitlist_form { flex-direction: column; align-items: stretch; }
+  .audace_page .audace_waitlist_form input[type="email"] { min-width: 0; }
+}
+/* École de l'Audace page END */
+
+.expertise_page .wonders .ventures_accordion .venture_cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 6px;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background-color: #121921;
+  color: #f7d45a;
+  font-family: Tanker;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  width: fit-content;
+  transition: transform 0.2s ease;
+}
+.expertise_page .wonders .ventures_accordion .venture_cta:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------- */
+/* Reusable contrast columns (dim / bright) START */
+/* ---------------------------------------------------- */
+.contrast_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(18, 25, 33, 0.12);
+}
+.contrast_col { padding: clamp(28px, 2.7777777778vw, 40px); }
+.contrast_col.dim { background-color: #e9dfd0; }
+.contrast_col.bright { background-color: #121921; color: #efe6dd; }
+.contrast_col h4 {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+.contrast_col.dim h4 { color: #6b6459; }
+.contrast_col.bright h4 { color: #f7d45a; }
+.contrast_col ul { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.contrast_col li {
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(15px, 1.1111111111vw, 17px);
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.4;
+}
+.contrast_col.dim li::before { content: "\2013"; position: absolute; left: 0; color: #6b6459; }
+.contrast_col.bright li::before { content: "+"; position: absolute; left: 0; color: #e35e37; font-family: OldschoolGroteskBold; }
+
+@media screen and (max-width: 640px) {
+  .contrast_grid { grid-template-columns: 1fr; }
+}
+/* Reusable contrast columns END */
+
+/* ---------------------------------------------------- */
+/* fatou-journey: hidden struggle / today contrast START */
+/* ---------------------------------------------------- */
+.about_page .journey_contrast {
+  background-color: #efe6dd;
+  padding: clamp(50px, 5.5555555556vw, 95px) 0 0;
+}
+.about_page .journey_contrast .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+}
+.about_page .journey_contrast .text_block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 70ch;
+  margin-bottom: 36px;
+}
+.about_page .journey_contrast .section_label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: OldschoolGroteskMedium;
+  font-size: clamp(13px, 0.9722222222vw, 15px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e35e37;
+}
+.about_page .journey_contrast .section_label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgba(18, 25, 33, 0.15);
+}
+/* fatou-journey: hidden struggle / today contrast END */

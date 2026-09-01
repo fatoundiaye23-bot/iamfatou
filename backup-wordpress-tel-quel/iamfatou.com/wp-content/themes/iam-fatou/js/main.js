@@ -4,7 +4,8 @@ window.addEventListener("load", function () {
 
   if (!homeBody.classList.contains("page-template-home")) {
     let homeAnchor = document.querySelector(".header_container a:first-of-type");
-    homeAnchor.setAttribute("href", homeAnchor.getAttribute("href") + "/?home");
+    let homeHref = homeAnchor.getAttribute("href").replace(/\/$/, "");
+    homeAnchor.setAttribute("href", homeHref + "/?home");
   }
 
   const queryString = window.location.search;
