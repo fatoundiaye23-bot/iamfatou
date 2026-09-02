@@ -4354,6 +4354,13 @@ footer .footer_bottom .copyright {
   color: inherit;
   text-decoration: underline;
 }
+.audace_page .audace_waitlist_msg {
+  margin-top: 14px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 13px;
+  color: #121921;
+  min-height: 1em;
+}
 .audace_page .audace_contact {
   margin-top: 30px;
   font-family: OldschoolGroteskMedium;
