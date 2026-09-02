@@ -4340,9 +4340,21 @@ footer .footer_bottom .copyright {
 .audace_page .audace_waitlist_consent input[type="checkbox"] {
   margin-top: 3px;
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  accent-color: #121921;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #121921;
+  background-color: #efe6dd;
+  cursor: pointer;
+}
+.audace_page .audace_waitlist_consent input[type="checkbox"]:checked {
+  background-color: #121921;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23efe6dd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M3 8.5l3 3 7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
 }
 .audace_page .audace_waitlist_consent label {
   font-family: OldschoolGroteskRegular;
