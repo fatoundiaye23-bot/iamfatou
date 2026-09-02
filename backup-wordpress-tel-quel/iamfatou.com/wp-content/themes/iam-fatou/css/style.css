@@ -4718,4 +4718,215 @@ footer .footer_bottom .copyright {
 @media screen and (max-width: 480px) {
   .subscribe_success_card { padding: 40px 28px; }
 }
+
+/* ---------------------------------------------------- */
+/* GDPR cookie consent bar + settings modal (on-brand)   */
+/* Plugin's own stylesheet never made it into the static */
+/* export, so it rendered with zero styling.             */
+/* ---------------------------------------------------- */
+#moove_gdpr_cookie_info_bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99998;
+  background-color: #121921;
+  border-top: 1px solid rgba(239, 230, 221, 0.15);
+  padding: 20px 24px;
+}
+#moove_gdpr_cookie_info_bar.moove-gdpr-info-bar-hidden { display: none !important; }
+#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container { max-width: 1200px; margin: 0 auto; }
+#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+#moove_gdpr_cookie_info_bar .moove-gdpr-cookie-notice {
+  flex: 1 1 320px;
+  font-family: OldschoolGroteskRegular;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #a8a297;
+}
+#moove_gdpr_cookie_info_bar .moove-gdpr-cookie-notice p { margin: 0; }
+#moove_gdpr_cookie_info_bar .moove-gdpr-cookie-notice p + p { margin-top: 4px; }
+#moove_gdpr_cookie_info_bar .change-settings-button {
+  background: none !important;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #efe6dd !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#moove_gdpr_cookie_info_bar .moove-gdpr-button-holder { display: flex; gap: 10px; flex-shrink: 0; }
+/* !important below: overrides a leftover inline <style> block the old
+   WordPress plugin injects into every page's <head> (purple #6d14f4
+   buttons) that never got cleaned up in the static export. */
+#moove_gdpr_cookie_info_bar .mgbutton {
+  font-family: OldschoolGroteskMedium;
+  font-size: 13px;
+  padding: 11px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 2px solid #efe6dd;
+  background-color: transparent !important;
+  color: #efe6dd !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+#moove_gdpr_cookie_info_bar .moove-gdpr-infobar-allow-all { background-color: #efe6dd !important; color: #121921 !important; }
+#moove_gdpr_cookie_info_bar .moove-gdpr-infobar-allow-all:hover { background-color: #e35e37 !important; border-color: #e35e37; color: #121921 !important; }
+#moove_gdpr_cookie_info_bar .moove-gdpr-infobar-reject-btn:hover { background-color: rgba(239, 230, 221, 0.1) !important; color: #efe6dd !important; }
+
+dialog#moove_gdpr_cookie_modal {
+  border: none;
+  padding: 0;
+  border-radius: 20px;
+  max-width: 720px;
+  width: calc(100% - 48px);
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+  background-color: #efe6dd;
+  color: #121921;
+}
+dialog#moove_gdpr_cookie_modal::backdrop { background-color: rgba(18, 25, 33, 0.72); }
+/* The plugin's JS toggles between class names ("gdpr_lightbox-hide"
+   on load, "gdpr_lightbox-hidden" after interacting) without ever
+   setting the native [open] attribute, so force visibility off the
+   class instead of relying on <dialog> defaults. */
+#moove_gdpr_cookie_modal { display: none; }
+#moove_gdpr_cookie_modal:not(.gdpr_lightbox-hide):not(.gdpr_lightbox-hidden) { display: flex !important; }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-content { display: flex; flex-wrap: wrap; position: relative; }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(18, 25, 33, 0.08);
+  cursor: pointer;
+  z-index: 2;
+}
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close .moovegdpr-arrow-close {
+  display: block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  margin: 0 auto;
+}
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close .gdpr-icon {
+  background-color: transparent !important;
+  border: none !important;
+}
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close .moovegdpr-arrow-close::before,
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close .moovegdpr-arrow-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #121921 !important;
+}
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close .moovegdpr-arrow-close::before { transform: rotate(45deg); }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-close .moovegdpr-arrow-close::after { transform: rotate(-45deg); }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-left-content {
+  flex: 0 0 220px;
+  background-color: #121921;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+}
+#moove_gdpr_cookie_modal .moove-gdpr-company-logo-holder img { width: 44px; height: 44px; border-radius: 50%; }
+#moove_gdpr_cookie_modal #moove-gdpr-menu {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#moove_gdpr_cookie_modal #moove-gdpr-menu button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 13px;
+  color: #a8a297;
+  cursor: pointer;
+}
+#moove_gdpr_cookie_modal #moove-gdpr-menu li.menu-item-selected button { background-color: rgba(239, 230, 221, 0.1); color: #efe6dd; }
+#moove_gdpr_cookie_modal .moove-gdpr-branding-cnt { margin-top: auto; padding-top: 24px; }
+#moove_gdpr_cookie_modal .moove-gdpr-branding { font-family: OldschoolGroteskRegular; font-size: 11px; color: #6b6459; text-decoration: none; }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-right-content { flex: 1 1 380px; padding: 48px 40px 32px; }
+#moove_gdpr_cookie_modal .tab-title { display: block; font-family: OldschoolGroteskMedium; font-size: 18px; color: #121921; margin-bottom: 12px; }
+#moove_gdpr_cookie_modal .moove-gdpr-tab-main-content p {
+  font-family: OldschoolGroteskRegular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(18, 25, 33, 0.75);
+}
+#moove_gdpr_cookie_modal .cookie-switch { position: relative; display: inline-block; width: 44px; height: 24px; margin-top: 12px; }
+#moove_gdpr_cookie_modal .cookie-switch input { opacity: 0; width: 0; height: 0; }
+#moove_gdpr_cookie_modal .cookie-slider {
+  position: absolute;
+  inset: 0;
+  background-color: #d8cfc3;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#moove_gdpr_cookie_modal .cookie-slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background-color: #efe6dd;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+#moove_gdpr_cookie_modal input:checked + .cookie-slider { background-color: #55ba6e; }
+#moove_gdpr_cookie_modal input:checked + .cookie-slider::before { transform: translateX(20px); }
+#moove_gdpr_cookie_modal input:disabled + .cookie-slider { opacity: 0.6; cursor: not-allowed; }
+#moove_gdpr_cookie_modal .gdpr-sr-label,
+#moove_gdpr_cookie_modal .gdpr-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+#moove_gdpr_cookie_modal .moove-gdpr-modal-footer-content { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(18, 25, 33, 0.1); }
+#moove_gdpr_cookie_modal .moove-gdpr-button-holder { display: flex; gap: 10px; flex-wrap: wrap; }
+#moove_gdpr_cookie_modal .mgbutton {
+  font-family: OldschoolGroteskMedium;
+  font-size: 13px;
+  padding: 11px 24px;
+  border-radius: 999px;
+  border: 2px solid #121921;
+  background-color: transparent !important;
+  color: #121921 !important;
+  cursor: pointer;
+}
+#moove_gdpr_cookie_modal .mgbutton:hover { background-color: rgba(18, 25, 33, 0.06) !important; color: #121921 !important; }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-save-settings { background-color: #121921 !important; color: #efe6dd !important; }
+#moove_gdpr_cookie_modal .moove-gdpr-modal-save-settings:hover { background-color: #e35e37 !important; color: #121921 !important; }
+@media screen and (max-width: 640px) {
+  #moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-content { flex-direction: column; align-items: stretch; }
+  #moove_gdpr_cookie_info_bar .moove-gdpr-button-holder { justify-content: stretch; }
+  #moove_gdpr_cookie_info_bar .mgbutton { flex: 1; text-align: center; }
+  #moove_gdpr_cookie_modal .moove-gdpr-modal-content { flex-direction: column; }
+  #moove_gdpr_cookie_modal .moove-gdpr-modal-left-content { flex: none; padding: 24px; }
+  #moove_gdpr_cookie_modal .moove-gdpr-modal-right-content { padding: 32px 24px; }
+}
 /* Offers band END */
