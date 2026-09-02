@@ -4308,6 +4308,12 @@ footer .footer_bottom .copyright {
 .audace_page .audace_waitlist_form {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.audace_page .audace_waitlist_row {
+  display: flex;
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
@@ -4324,6 +4330,30 @@ footer .footer_bottom .copyright {
   color: #121921;
 }
 .audace_page .audace_waitlist_form input[type="email"]::placeholder { color: #6b6459; }
+.audace_page .audace_waitlist_consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 440px;
+  text-align: left;
+}
+.audace_page .audace_waitlist_consent input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #121921;
+}
+.audace_page .audace_waitlist_consent label {
+  font-family: OldschoolGroteskRegular;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(18,25,33,0.7);
+}
+.audace_page .audace_waitlist_consent a {
+  color: inherit;
+  text-decoration: underline;
+}
 .audace_page .audace_contact {
   margin-top: 30px;
   font-family: OldschoolGroteskMedium;
@@ -4349,7 +4379,7 @@ footer .footer_bottom .copyright {
   .audace_page .infos_grid { grid-template-columns: 1fr; }
   .audace_page .atouts_grid { grid-template-columns: 1fr; }
   .audace_page .contrast_grid { grid-template-columns: 1fr; }
-  .audace_page .audace_waitlist_form { flex-direction: column; align-items: stretch; }
+  .audace_page .audace_waitlist_row { flex-direction: column; align-items: stretch; width: 100%; }
   .audace_page .audace_waitlist_form input[type="email"] { min-width: 0; }
 }
 /* École de l'Audace page END */
