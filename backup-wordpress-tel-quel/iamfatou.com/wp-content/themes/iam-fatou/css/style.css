@@ -4623,34 +4623,3 @@ footer .footer_bottom .copyright {
   color: #a8a297;
 }
 /* Offers band END */
-
-/* ---------------------------------------------------- */
-/* Full-bleed intro band, in the page's own accent color (--main_clr) START */
-/* Mockup for one section per Fatou's request, before rolling out further */
-/* ---------------------------------------------------- */
-.expertise_page .hero_intro_band {
-  background-color: var(--main_clr);
-  padding: clamp(48px, 5vw, 90px) 0;
-}
-.expertise_page .hero_intro_band .container {
-  max-width: clamp(1134px, 78.75vw, 1400px);
-}
-.expertise_page .hero_intro_band h3 {
-  font-family: Tanker;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #121921;
-  font-size: clamp(30px, 3vw, 48px);
-  line-height: 1.05;
-  max-width: 18ch;
-}
-.expertise_page .hero_intro_band p {
-  font-family: OldschoolGroteskRegular;
-  color: #121921;
-  opacity: 0.82;
-  font-size: clamp(16px, 1.1111111111vw, 19px);
-  line-height: 1.6;
-  margin-top: 22px;
-  max-width: 62ch;
-}
-/* Full-bleed intro band END */
