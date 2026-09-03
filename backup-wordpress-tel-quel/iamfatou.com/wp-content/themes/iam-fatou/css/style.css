@@ -4738,6 +4738,15 @@ footer .footer_bottom .copyright {
 .expertise_page .exp_final_cta .exp_final_contact a { color: inherit; text-decoration: underline; }
 /* Expertise page final CTA band END */
 
+/* Match .wonders .container's width everywhere, so every full-width
+   band on an expertise page lines up on the same side margins */
+.expertise_page .exp_manifesto .container,
+.expertise_page .exp_topics .container,
+.expertise_page .exp_showup .container,
+.expertise_page .exp_final_cta .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+}
+
 /* ---------------------------------------------------- */
 /* Expertise page eyebrow bar (label — rule — secondary tag) START */
 /* ---------------------------------------------------- */
