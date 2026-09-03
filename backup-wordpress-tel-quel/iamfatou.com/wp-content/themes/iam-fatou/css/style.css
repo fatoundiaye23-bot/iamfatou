@@ -4665,6 +4665,9 @@ footer .footer_bottom .copyright {
   flex-wrap: wrap;
   align-content: flex-start;
   gap: 10px;
+  border: 1px solid rgba(18, 25, 33, 0.14);
+  border-radius: 16px;
+  padding: 20px;
 }
 .expertise_page .logo_wall span {
   display: inline-flex;
