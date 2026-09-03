@@ -1820,6 +1820,7 @@ body.expertise_page header {
 .expertise_page .wonders .container {
   max-width: clamp(1134px, 78.75vw, 1400px);
 }
+.expertise_page .wonders.wonders_continued { padding-top: clamp(60px, 6vw, 96px); }
 .expertise_page .wonders .exp_desc.no_actions .left {
   max-width: 100%;
   /* text-align: center; */
@@ -4743,6 +4744,8 @@ footer .footer_bottom .copyright {
 .expertise_page .exp_manifesto .container,
 .expertise_page .exp_topics .container,
 .expertise_page .exp_showup .container,
+.expertise_page .exp_reach .container,
+.expertise_page .exp_booksme .container,
 .expertise_page .exp_final_cta .container {
   max-width: clamp(1134px, 78.75vw, 1400px);
 }
@@ -4837,20 +4840,6 @@ footer .footer_bottom .copyright {
   padding-bottom: clamp(60px, 6vw, 96px);
 }
 .expertise_page .exp_topics .exp_sec_head { margin-top: 26px; max-width: 720px; }
-.expertise_page .exp_topics .exp_sec_head h2 {
-  font-family: Tanker;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #121921;
-  font-size: clamp(30px, 3vw, 46px);
-  line-height: 1.05;
-}
-.expertise_page .exp_topics .exp_sec_head p {
-  margin-top: 14px;
-  font-family: OldschoolGroteskRegular;
-  font-size: clamp(15px, 1.05vw, 17px);
-  color: #6b6459;
-}
 .expertise_page .topic_grid {
   margin-top: 42px;
   display: grid;
@@ -4897,14 +4886,7 @@ footer .footer_bottom .copyright {
   padding: clamp(60px, 6vw, 96px) 0;
 }
 .expertise_page .exp_showup .exp_sec_head { margin-top: 26px; max-width: 760px; }
-.expertise_page .exp_showup .exp_sec_head h2 {
-  font-family: Tanker;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #efe6dd;
-  font-size: clamp(30px, 3vw, 46px);
-  line-height: 1.05;
-}
+.expertise_page .exp_showup .exp_sec_head h2 { color: #efe6dd; }
 .expertise_page .exp_showup_grid {
   margin-top: 42px;
   display: grid;
@@ -4937,6 +4919,135 @@ footer .footer_bottom .copyright {
   .expertise_page .exp_showup_grid { grid-template-columns: 1fr; }
 }
 /* Expertise page dark full-bleed showup band END */
+
+/* ---------------------------------------------------- */
+/* Expertise page press strip (dark, inline chips) START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_press_strip {
+  background-color: #1c2340;
+  border-top: 1px solid rgba(245, 237, 222, 0.12);
+  border-bottom: 1px solid rgba(245, 237, 222, 0.12);
+}
+.expertise_page .exp_press_strip .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.expertise_page .exp_press_strip .strip_label {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a8a297;
+  margin-right: 8px;
+}
+.expertise_page .exp_press_strip .strip_chip {
+  font-family: OldschoolGroteskMedium;
+  font-size: 14px;
+  color: #efe6dd;
+  opacity: 0.92;
+}
+/* Expertise page press strip END */
+
+/* ---------------------------------------------------- */
+/* Expertise page "who books me" section + atout cards START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_booksme {
+  background-color: #efe6dd;
+  padding: clamp(60px, 6vw, 96px) 0;
+}
+.expertise_page .exp_booksme .exp_sec_head { margin-top: 26px; max-width: 720px; }
+.expertise_page .atouts_grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.expertise_page .atout_card {
+  background-color: #e4d5b4;
+  border-radius: 16px;
+  padding: 26px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.expertise_page .atout_card .atout_icon { flex-shrink: 0; width: 30px; height: 30px; color: #c8431a; }
+.expertise_page .atout_card p {
+  font-family: OldschoolGroteskMedium;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3b3327;
+}
+@media screen and (max-width: 900px) {
+  .expertise_page .atouts_grid { grid-template-columns: 1fr; }
+}
+/* Expertise page "who books me" section END */
+
+/* ---------------------------------------------------- */
+/* Expertise page mid-page CTA banner START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_mid_cta { background-color: var(--main_clr); }
+.expertise_page .exp_mid_cta .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.expertise_page .exp_mid_cta p {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: clamp(20px, 2.4vw, 30px);
+  max-width: 60ch;
+  color: #121921;
+  line-height: 1.15;
+}
+/* Expertise page mid-page CTA banner END */
+
+/* ---------------------------------------------------- */
+/* Expertise page "on stage" video section header START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_onstage_head { margin-bottom: 30px; }
+.expertise_page .exp_onstage_head .exp_sec_head { margin-top: 26px; }
+/* Expertise page "on stage" video section header END */
+
+/* ---------------------------------------------------- */
+/* Expertise page shared section-head heading (generic) START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_sec_head h2 {
+  font-family: Tanker;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #121921;
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.05;
+}
+.expertise_page .exp_sec_head p {
+  margin-top: 14px;
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(15px, 1.05vw, 17px);
+  color: #6b6459;
+}
+/* Expertise page shared section-head heading END */
+
+/* ---------------------------------------------------- */
+/* Expertise page full-width "where I've spoken" section START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_reach {
+  background-color: #efe6dd;
+  padding: clamp(60px, 6vw, 96px) 0;
+}
+.expertise_page .exp_reach .exp_sec_head { margin-top: 26px; max-width: 760px; }
+.expertise_page .exp_reach .reach_row { margin-top: 42px; }
+/* Expertise page full-width "where I've spoken" section END */
 
 /* ---------------------------------------------------- */
 /* Offers band: dark showcase panel for bookable talks/services START */
