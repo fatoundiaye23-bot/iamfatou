@@ -3713,7 +3713,7 @@ footer .footer_bottom .copyright {
 }
 .audace_page .accent { color: #e35e37; }
 
-.audace_page .pill_btn {
+.pill_btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3726,12 +3726,18 @@ footer .footer_bottom .copyright {
   text-transform: uppercase;
   text-decoration: none !important;
   border: 2px solid transparent;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
-.audace_page .pill_btn:hover { transform: translateY(-2px); }
+.pill_btn:hover { transform: translateY(-2px); }
 .audace_page .pill_btn.primary { background-color: #121921; color: #f7d45a; }
 .audace_page .pill_btn.ghost { border-color: rgba(18,25,33,0.35); color: #121921; }
 .audace_page .pill_btn.ghost:hover { border-color: #121921; background: rgba(18,25,33,0.06); }
+/* Expertise pages (Speaker/Entrepreneur/Opinion Leader): theme off --main_clr */
+.expertise_page .pill_btn.primary { background-color: #121921; color: var(--main_clr); }
+.expertise_page .pill_btn.ghost { border-color: rgba(18,25,33,0.35); color: #121921; }
+.expertise_page .pill_btn.ghost:hover { border-color: #121921; background: rgba(18,25,33,0.06); }
+.expertise_page .pill_btn.ghost_dark { border-color: rgba(245,237,222,0.4); color: #efe6dd; }
+.expertise_page .pill_btn.ghost_dark:hover { border-color: #efe6dd; background: rgba(245,237,222,0.08); }
 
 .audace_page .text_block {
   display: flex;
@@ -4578,6 +4584,156 @@ footer .footer_bottom .copyright {
   color: #6b6459;
 }
 /* Reusable numbered offer cards END */
+.offer_card .offer_cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(245, 237, 222, 0.3);
+  color: #efe6dd;
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.offer_card .offer_cta:hover { border-color: #efe6dd; background: rgba(245, 237, 222, 0.08); }
+
+/* ---------------------------------------------------- */
+/* Reusable stat highlight (big Tanker number + label) START */
+/* ---------------------------------------------------- */
+.stat_highlight {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 18px;
+}
+.stat_highlight .stat_num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: clamp(40px, 4vw, 60px);
+  color: #e35e37;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.stat_highlight .stat_label {
+  font-family: OldschoolGroteskMedium;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b6459;
+  max-width: 24ch;
+}
+/* Reusable stat highlight END */
+
+/* ---------------------------------------------------- */
+/* Reach row: dark stat card + logo-wall chips START */
+/* ---------------------------------------------------- */
+.expertise_page .reach_row {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 18px;
+}
+.expertise_page .reach_stat_card {
+  background-color: #121921;
+  border-radius: 16px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.expertise_page .reach_stat_card .stat_num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: clamp(40px, 4vw, 56px);
+  color: var(--main_clr);
+  line-height: 1;
+}
+.expertise_page .reach_stat_card .stat_label {
+  margin-top: 12px;
+  font-family: OldschoolGroteskRegular;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #a8a297;
+}
+.expertise_page .logo_wall {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+}
+.expertise_page .logo_wall span {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background-color: #efe6dd;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 14px;
+  color: #121921;
+}
+@media screen and (max-width: 720px) {
+  .expertise_page .reach_row { grid-template-columns: 1fr; }
+}
+/* Reach row END */
+
+/* ---------------------------------------------------- */
+/* Expertise page hero CTA row START */
+/* ---------------------------------------------------- */
+.expertise_page .hero_section .hero_ctas {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: clamp(30px, 3vw, 50px);
+  padding: 0 24px;
+}
+/* Expertise page hero CTA row END */
+
+/* ---------------------------------------------------- */
+/* Expertise page final CTA band, in the page's own accent color START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_final_cta {
+  background-color: var(--main_clr);
+  padding: clamp(70px, 7vw, 100px) 0;
+}
+.expertise_page .exp_final_cta_inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.expertise_page .exp_final_cta h2 {
+  font-size: clamp(32px, 4.2vw, 56px);
+  color: #121921;
+}
+.expertise_page .exp_final_cta p {
+  margin-top: 16px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 16px;
+  max-width: 52ch;
+  color: rgba(18, 25, 33, 0.82);
+}
+.expertise_page .exp_final_cta .exp_final_ctas {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.expertise_page .exp_final_cta .exp_final_contact {
+  margin-top: 22px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 13px;
+  color: rgba(18, 25, 33, 0.75);
+}
+.expertise_page .exp_final_cta .exp_final_contact a { color: inherit; text-decoration: underline; }
+/* Expertise page final CTA band END */
 
 /* ---------------------------------------------------- */
 /* Offers band: dark showcase panel for bookable talks/services START */
