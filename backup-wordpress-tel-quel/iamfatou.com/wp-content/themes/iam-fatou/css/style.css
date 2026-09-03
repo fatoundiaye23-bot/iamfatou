@@ -4739,6 +4739,197 @@ footer .footer_bottom .copyright {
 /* Expertise page final CTA band END */
 
 /* ---------------------------------------------------- */
+/* Expertise page eyebrow bar (label — rule — secondary tag) START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: clamp(11px, 0.85vw, 13px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #121921;
+}
+.expertise_page .exp_eyebrow .rule { flex: 1; height: 1px; background-color: rgba(18, 25, 33, 0.15); }
+.expertise_page .exp_eyebrow .secondary { color: #6b6459; white-space: nowrap; }
+.expertise_page .exp_eyebrow.on_ink { color: #efe6dd; }
+.expertise_page .exp_eyebrow.on_ink .rule { background-color: rgba(245, 237, 222, 0.18); }
+.expertise_page .exp_eyebrow.on_ink .secondary { color: #a8a297; }
+/* Expertise page eyebrow bar END */
+
+/* ---------------------------------------------------- */
+/* Expertise page manifesto (pull-quote + bio) START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_manifesto {
+  background-color: #efe6dd;
+  padding: clamp(60px, 6vw, 96px) 0;
+}
+.expertise_page .exp_manifesto_inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media screen and (min-width: 940px) {
+  .expertise_page .exp_manifesto_inner { grid-template-columns: 0.85fr 1.15fr; align-items: center; }
+}
+.expertise_page .exp_manifesto blockquote {
+  margin: 0;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+  color: #121921;
+}
+.expertise_page .exp_manifesto blockquote .accent { color: #e35e37; }
+.expertise_page .exp_manifesto cite {
+  display: block;
+  margin-top: 18px;
+  font-style: normal;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #6b6459;
+}
+.expertise_page .exp_manifesto_copy p {
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.7;
+  color: rgba(18, 25, 33, 0.82);
+  max-width: 56ch;
+}
+.expertise_page .exp_manifesto_copy p + p { margin-top: 16px; }
+.expertise_page .exp_manifesto_copy .exp_tags {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.expertise_page .exp_manifesto_copy .exp_tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background-color: #e4d5b4;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 13px;
+  color: #121921;
+}
+/* Expertise page manifesto END */
+
+/* ---------------------------------------------------- */
+/* Expertise page numbered topic grid (2x2 bordered) START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_topics {
+  background-color: #efe6dd;
+  padding-bottom: clamp(60px, 6vw, 96px);
+}
+.expertise_page .exp_topics .exp_sec_head { margin-top: 26px; max-width: 720px; }
+.expertise_page .exp_topics .exp_sec_head h2 {
+  font-family: Tanker;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #121921;
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.05;
+}
+.expertise_page .exp_topics .exp_sec_head p {
+  margin-top: 14px;
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(15px, 1.05vw, 17px);
+  color: #6b6459;
+}
+.expertise_page .topic_grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: rgba(18, 25, 33, 0.12);
+  border: 1px solid rgba(18, 25, 33, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.expertise_page .topic_card { background-color: #efe6dd; padding: 32px 28px; min-height: 170px; }
+.expertise_page .topic_card .topic_num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: 34px;
+  color: #e35e37;
+  display: block;
+}
+.expertise_page .topic_card h3 {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 18px;
+  margin-top: 10px;
+  line-height: 1.3;
+}
+.expertise_page .topic_card p {
+  font-family: OldschoolGroteskRegular;
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #6b6459;
+}
+@media screen and (max-width: 680px) {
+  .expertise_page .topic_grid { grid-template-columns: 1fr; }
+}
+/* Expertise page numbered topic grid END */
+
+/* ---------------------------------------------------- */
+/* Expertise page dark full-bleed "how I show up" band START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_showup {
+  background-color: #121921;
+  padding: clamp(60px, 6vw, 96px) 0;
+}
+.expertise_page .exp_showup .exp_sec_head { margin-top: 26px; max-width: 760px; }
+.expertise_page .exp_showup .exp_sec_head h2 {
+  font-family: Tanker;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #efe6dd;
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.05;
+}
+.expertise_page .exp_showup_grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.expertise_page .exp_showup_card {
+  background-color: #1c2340;
+  border: 1px solid rgba(245, 237, 222, 0.12);
+  border-radius: 16px;
+  padding: 30px 26px;
+}
+.expertise_page .exp_showup_card .exp_showup_icon { width: 34px; height: 34px; color: var(--main_clr); }
+.expertise_page .exp_showup_card h3 {
+  margin-top: 20px;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 17px;
+  color: #efe6dd;
+}
+.expertise_page .exp_showup_card p {
+  margin-top: 10px;
+  font-family: OldschoolGroteskRegular;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #a8a297;
+}
+@media screen and (max-width: 780px) {
+  .expertise_page .exp_showup_grid { grid-template-columns: 1fr; }
+}
+/* Expertise page dark full-bleed showup band END */
+
+/* ---------------------------------------------------- */
 /* Offers band: dark showcase panel for bookable talks/services START */
 /* ---------------------------------------------------- */
 .expertise_page .wonders .offers_band {
