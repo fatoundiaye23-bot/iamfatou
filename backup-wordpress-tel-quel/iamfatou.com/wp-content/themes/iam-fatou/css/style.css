@@ -4713,7 +4713,11 @@ footer .footer_bottom .copyright {
   align-items: center;
 }
 .expertise_page .exp_final_cta h2 {
+  font-family: Tanker;
+  font-weight: normal;
+  text-transform: uppercase;
   font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.05;
   color: #121921;
 }
 .expertise_page .exp_final_cta p {
