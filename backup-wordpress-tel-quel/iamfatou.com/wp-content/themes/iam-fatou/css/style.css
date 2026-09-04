@@ -4750,6 +4750,7 @@ footer .footer_bottom .copyright {
 .expertise_page .exp_showup .container,
 .expertise_page .exp_reach .container,
 .expertise_page .exp_booksme .container,
+.expertise_page .exp_stats .container,
 .expertise_page .exp_final_cta .container {
   max-width: clamp(1134px, 78.75vw, 1400px);
 }
@@ -5022,6 +5023,77 @@ footer .footer_bottom .copyright {
 .expertise_page .exp_onstage_head { margin-bottom: 30px; }
 .expertise_page .exp_onstage_head .exp_sec_head { margin-top: 26px; }
 /* Expertise page "on stage" video section header END */
+
+/* ---------------------------------------------------- */
+/* Expertise page hero meta row (small stat line under hero CTAs) START */
+/* ---------------------------------------------------- */
+.expertise_page .hero_section .exp_hero_meta {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(239, 230, 221, 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 28px;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 13px;
+  color: #efe6dd;
+}
+.expertise_page .hero_section .exp_hero_meta .lbl { opacity: 0.65; font-weight: 600; margin-right: 4px; }
+/* Expertise page hero meta row END */
+
+/* ---------------------------------------------------- */
+/* Expertise page dark full-bleed stat band START */
+/* ---------------------------------------------------- */
+.expertise_page .exp_stats { background-color: #121921; }
+.expertise_page .exp_stats .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+  padding-top: 44px;
+  padding-bottom: 44px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 20px;
+}
+@media screen and (min-width: 720px) {
+  .expertise_page .exp_stats .container { grid-template-columns: repeat(5, 1fr); }
+}
+.expertise_page .exp_stats .stat_cell .num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: clamp(28px, 3.4vw, 40px);
+  color: var(--main_clr);
+  line-height: 1;
+}
+.expertise_page .exp_stats .stat_cell .lbl {
+  margin-top: 8px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #a8a297;
+  max-width: 20ch;
+}
+/* Expertise page dark full-bleed stat band END */
+
+/* ---------------------------------------------------- */
+/* Expertise page small "at a glance" stat cells (inside accordion) START */
+/* ---------------------------------------------------- */
+.expertise_page .venture_stats { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+.expertise_page .venture_stats .venture_stat_cell .num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: 24px;
+  color: #e35e37;
+  line-height: 1;
+}
+.expertise_page .venture_stats .venture_stat_cell .lbl {
+  margin-top: 4px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 12px;
+  color: #6b6459;
+  max-width: 16ch;
+}
+/* Expertise page small "at a glance" stat cells END */
 
 /* ---------------------------------------------------- */
 /* Expertise page shared section-head heading (generic) START */
