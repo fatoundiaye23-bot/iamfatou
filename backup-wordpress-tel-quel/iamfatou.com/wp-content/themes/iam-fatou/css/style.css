@@ -4691,11 +4691,12 @@ footer .footer_bottom .copyright {
 /* ---------------------------------------------------- */
 .expertise_page .hero_section .hero_ctas {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 14px;
   flex-wrap: wrap;
   margin-top: clamp(30px, 3vw, 50px);
-  padding: 0 24px;
+  margin-left: clamp(80px, 34.1666666667vw, 580px);
+  padding-right: 24px;
 }
 /* Expertise page hero CTA row END */
 
@@ -5022,7 +5023,7 @@ footer .footer_bottom .copyright {
 /* ---------------------------------------------------- */
 /* Expertise page "on stage" video section header START */
 /* ---------------------------------------------------- */
-.expertise_page .exp_onstage_head { margin-bottom: 30px; }
+.expertise_page .exp_onstage_head { margin-top: clamp(48px, 5vw, 76px); margin-bottom: 30px; }
 .expertise_page .exp_onstage_head .exp_sec_head { margin-top: 26px; }
 /* Expertise page "on stage" video section header END */
 
@@ -5031,11 +5032,13 @@ footer .footer_bottom .copyright {
 /* ---------------------------------------------------- */
 .expertise_page .hero_section .exp_hero_meta {
   margin-top: 26px;
+  margin-left: clamp(80px, 34.1666666667vw, 580px);
   padding-top: 20px;
+  padding-right: 24px;
   border-top: 1px solid rgba(239, 230, 221, 0.25);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px 28px;
   font-family: OldschoolGroteskBold;
   font-weight: bold;
@@ -5175,7 +5178,7 @@ footer .footer_bottom .copyright {
 /* ---------------------------------------------------- */
 /* Expertise page origin cards (smaller ventures, 3-up) START */
 /* ---------------------------------------------------- */
-.expertise_page .exp_origins { background-color: #efe6dd; padding-bottom: clamp(60px, 6vw, 96px); }
+.expertise_page .exp_origins { background-color: #efe6dd; padding-top: clamp(56px, 5.5vw, 84px); padding-bottom: clamp(60px, 6vw, 96px); }
 .expertise_page .exp_origins .exp_sec_head { margin-top: 0; }
 .expertise_page .exp_origins .exp_sec_head h2 { font-size: clamp(22px, 3vw, 30px); }
 .expertise_page .origins_grid { margin-top: 24px; display: grid; grid-template-columns: 1fr; gap: 16px; }

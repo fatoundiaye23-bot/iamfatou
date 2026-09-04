@@ -617,6 +617,11 @@
     margin-top: 40px;
   }
 
+  .expertise_page .hero_section .hero_ctas,
+  .expertise_page .hero_section .exp_hero_meta {
+    margin-left: 10px;
+  }
+
   .expertise_page .hero_section {
     padding-top: 170px;
   }
