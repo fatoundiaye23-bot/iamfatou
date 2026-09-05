@@ -5063,6 +5063,7 @@ footer .footer_bottom .copyright {
 }
 @media screen and (min-width: 720px) {
   .expertise_page .exp_stats .container { grid-template-columns: repeat(5, 1fr); }
+  .expertise_page .exp_stats.cols_4 .container { grid-template-columns: repeat(4, 1fr); }
 }
 .expertise_page .exp_stats .stat_cell .num {
   font-family: Tanker;
@@ -5229,6 +5230,7 @@ footer .footer_bottom .copyright {
 }
 .expertise_page .exp_reach .exp_sec_head { margin-top: 26px; max-width: 760px; }
 .expertise_page .exp_reach .reach_row { margin-top: 42px; }
+.expertise_page .reach_row.reach_row_solo { display: block; }
 /* Expertise page full-width "where I've spoken" section END */
 
 /* ---------------------------------------------------- */
