@@ -1715,7 +1715,7 @@ body.expertise_page header {
 .expertise_page .hero_section {
   background-color: var(--main_clr);
   padding-top: clamp(120px, 13.1944444444vw, 300px);
-  padding-bottom: clamp(60px, 7.6388888889vw, 210px);
+  padding-bottom: clamp(90px, 10.5vw, 240px);
 }
 .expertise_page .hero_section .container {
   max-width: clamp(1440px, 100vw, 1700px);
