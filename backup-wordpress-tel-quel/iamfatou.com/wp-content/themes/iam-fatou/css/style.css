@@ -1821,7 +1821,8 @@ body.expertise_page header {
 .expertise_page .wonders .container {
   max-width: clamp(1134px, 78.75vw, 1400px);
 }
-.expertise_page .wonders.wonders_continued { padding-top: clamp(60px, 6vw, 96px); }
+.expertise_page .wonders.wonders_continued { padding-top: clamp(36px, 3.5vw, 56px); }
+.expertise_page .wonders.wonders_continued .offers_band { margin-top: 0; }
 .expertise_page .wonders .exp_desc.no_actions .left {
   max-width: 100%;
   /* text-align: center; */
