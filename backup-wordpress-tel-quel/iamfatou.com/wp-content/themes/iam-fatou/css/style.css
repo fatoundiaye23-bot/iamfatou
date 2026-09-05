@@ -5161,6 +5161,7 @@ footer .footer_bottom .copyright {
 .expertise_page .flagship_row ul li::before { content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background-color: #e35e37; }
 .expertise_page .flagship_row .closing { margin-top: 18px; font-family: OldschoolGroteskBold; font-weight: bold; font-style: italic; font-size: 14.5px; color: var(--main_clr); }
 .expertise_page .flagship_row .venture_cta { margin-top: 20px; }
+.expertise_page .flagship_row .pill_btn.primary { background-color: var(--main_clr) !important; color: #121921 !important; }
 .expertise_page .flagship_side { background-color: #1c2340; border-radius: 12px; padding: 24px; }
 .expertise_page .flagship_side .side_label {
   font-family: OldschoolGroteskBold;
