@@ -1728,6 +1728,7 @@ body.expertise_page header {
 }
 .expertise_page .hero_section .container .content .current_exp {
   display: flex;
+  flex-direction: column;
   position: relative;
   isolation: isolate;
 }
