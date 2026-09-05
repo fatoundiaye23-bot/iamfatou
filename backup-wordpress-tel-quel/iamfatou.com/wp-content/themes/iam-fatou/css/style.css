@@ -3231,11 +3231,22 @@ footer .contact_intro a {
 footer .contact_intro em {
   font-style: italic;
 }
-.contact_page footer .contact_hero {
-  text-align: center;
-  max-width: clamp(600px, 60vw, 900px);
-  margin: 0 auto 34px;
+footer .contact_intro_links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 4px;
 }
+.contact_page footer .contact_hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  text-align: left;
+  margin: 0 0 44px;
+}
+.contact_page footer .contact_hero_text { max-width: 620px; }
 .contact_page footer .contact_hero .contact_eyebrow {
   font-family: OldschoolGroteskBold;
   font-weight: bold;
@@ -3254,12 +3265,55 @@ footer .contact_intro em {
   line-height: 1.05;
   color: #121921;
 }
+.contact_page footer .contact_hero_sub {
+  margin-top: 22px;
+  font-family: OldschoolGroteskRegular;
+  font-size: clamp(16px, 1.1vw, 18.5px);
+  line-height: 1.6;
+  color: rgba(18, 25, 33, 0.75);
+  max-width: 54ch;
+}
+.contact_page footer .contact_hero_sub b {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  color: #121921;
+}
+.contact_page footer .contact_hero_ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+.contact_page footer .contact_hero .pill_btn.primary { background-color: #121921; color: var(--main_clr); }
+.contact_page footer .contact_hero .pill_btn.ghost { border-color: rgba(18, 25, 33, 0.35); color: #121921; }
+.contact_page footer .contact_hero .pill_btn.ghost:hover { border-color: #121921; background: rgba(18, 25, 33, 0.06); }
+.contact_page footer .contact_hero_visual { flex-shrink: 0; }
+.contact_page footer .contact_photo_card {
+  background-color: #121921;
+  border-radius: 8px;
+  padding: 12px;
+  transform: rotate(3deg);
+}
+.contact_page footer .contact_photo_card img {
+  display: block;
+  width: min(300px, 60vw);
+  border-radius: 3px;
+  object-fit: cover;
+}
+@media screen and (max-width: 860px) {
+  .contact_page footer .contact_hero { flex-direction: column; text-align: center; }
+  .contact_page footer .contact_hero_text { max-width: 100%; }
+  .contact_page footer .contact_hero_sub { margin-left: auto; margin-right: auto; }
+  .contact_page footer .contact_hero_ctas { justify-content: center; }
+  .contact_page footer .contact_hero_visual { align-self: center; margin-top: 24px; }
+}
 footer .footer_top {
   display: flex;
   align-items: center;
   gap: clamp(23px, 1.5972222222vw, 60px);
   justify-content: center;
 }
+.contact_page footer .footer_top { padding-top: clamp(50px, 5vw, 90px); }
 footer .footer_top svg path,
 footer .footer_top svg rect {
   fill: var(--main_clr);
@@ -3762,8 +3816,8 @@ footer .footer_bottom .copyright {
 .expertise_page .pill_btn.primary { background-color: #121921; color: var(--main_clr); }
 .expertise_page .pill_btn.ghost { border-color: rgba(18,25,33,0.35); color: #121921; }
 .expertise_page .pill_btn.ghost:hover { border-color: #121921; background: rgba(18,25,33,0.06); }
-.expertise_page .pill_btn.ghost_dark { border-color: rgba(245,237,222,0.4); color: #efe6dd; }
-.expertise_page .pill_btn.ghost_dark:hover { border-color: #efe6dd; background: rgba(245,237,222,0.08); }
+.expertise_page .pill_btn.ghost_dark, .contact_page footer .pill_btn.ghost_dark { border-color: rgba(245,237,222,0.4); color: #efe6dd; }
+.expertise_page .pill_btn.ghost_dark:hover, .contact_page footer .pill_btn.ghost_dark:hover { border-color: #efe6dd; background: rgba(245,237,222,0.08); }
 
 .audace_page .text_block {
   display: flex;
