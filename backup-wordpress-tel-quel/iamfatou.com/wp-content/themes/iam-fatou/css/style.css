@@ -3301,11 +3301,12 @@ footer .contact_intro_links {
   object-fit: cover;
 }
 @media screen and (max-width: 860px) {
-  .contact_page footer .contact_hero { flex-direction: column; text-align: center; }
+  .contact_page footer .container { padding: 0 24px; }
+  .contact_page footer .contact_hero { flex-direction: column; text-align: center; gap: 24px; }
   .contact_page footer .contact_hero_text { max-width: 100%; }
   .contact_page footer .contact_hero_sub { margin-left: auto; margin-right: auto; }
   .contact_page footer .contact_hero_ctas { justify-content: center; }
-  .contact_page footer .contact_hero_visual { align-self: center; margin-top: 24px; }
+  .contact_page footer .contact_hero_visual { align-self: center; }
 }
 footer .footer_top {
   display: flex;
