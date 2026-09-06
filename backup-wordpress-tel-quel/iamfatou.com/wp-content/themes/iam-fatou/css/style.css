@@ -4979,6 +4979,7 @@ footer .footer_bottom .copyright {
 }
 @media screen and (min-width: 940px) {
   .expertise_page .exp_manifesto_inner, .contact_page footer .exp_manifesto_inner, .home_page .exp_manifesto_inner { grid-template-columns: 0.85fr 1.15fr; align-items: center; }
+  .home_page .exp_manifesto_inner { align-items: start; }
 }
 .expertise_page .exp_manifesto blockquote,
 .contact_page footer .exp_manifesto blockquote,
