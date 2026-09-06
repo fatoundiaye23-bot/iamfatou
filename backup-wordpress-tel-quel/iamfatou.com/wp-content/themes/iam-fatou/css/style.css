@@ -679,7 +679,7 @@ body:not(.about_page, .home_page) header {
   color: #121921;
 }
 .home_page .hero_section.hero_section_cont { padding-top: 0; }
-.home_page .typing_effect_container.typing_effect_container_cont { margin-top: clamp(56px, 6vw, 96px); }
+.home_page .hero_section .typing_effect_container.typing_effect_container_cont { margin-top: clamp(56px, 6vw, 96px); }
 .home_page .typing_tags {
   margin-top: 4px;
   display: flex;
@@ -700,8 +700,10 @@ body:not(.about_page, .home_page) header {
 .home_page .home_hero_ctas {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
-  margin-top: clamp(32px, 3.5vw, 48px);
+  max-width: clamp(674px, 46.8055555556vw, 898.6666666667px);
+  margin: clamp(32px, 3.5vw, 48px) auto 0;
 }
 .home_page .home_hero_ctas .pill_btn.primary { background-color: #f7d45a; color: #121921; }
 .home_page .home_hero_ctas .pill_btn.ghost { border-color: rgba(18, 25, 33, 0.35); color: #121921; }
