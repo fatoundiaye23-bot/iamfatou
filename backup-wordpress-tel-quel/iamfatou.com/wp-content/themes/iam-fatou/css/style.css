@@ -4971,16 +4971,18 @@ footer .footer_bottom .copyright {
   padding: clamp(60px, 6vw, 96px) 0;
 }
 .expertise_page .exp_manifesto_inner,
-.contact_page footer .exp_manifesto_inner {
+.contact_page footer .exp_manifesto_inner,
+.home_page .exp_manifesto_inner {
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
 }
 @media screen and (min-width: 940px) {
-  .expertise_page .exp_manifesto_inner, .contact_page footer .exp_manifesto_inner { grid-template-columns: 0.85fr 1.15fr; align-items: center; }
+  .expertise_page .exp_manifesto_inner, .contact_page footer .exp_manifesto_inner, .home_page .exp_manifesto_inner { grid-template-columns: 0.85fr 1.15fr; align-items: center; }
 }
 .expertise_page .exp_manifesto blockquote,
-.contact_page footer .exp_manifesto blockquote {
+.contact_page footer .exp_manifesto blockquote,
+.home_page .exp_manifesto blockquote {
   margin: 0;
   font-family: OldschoolGroteskBold;
   font-weight: bold;
@@ -4988,9 +4990,10 @@ footer .footer_bottom .copyright {
   line-height: 1.15;
   color: #121921;
 }
-.expertise_page .exp_manifesto blockquote .accent, .contact_page footer .exp_manifesto blockquote .accent { color: #e35e37; }
+.expertise_page .exp_manifesto blockquote .accent, .contact_page footer .exp_manifesto blockquote .accent, .home_page .exp_manifesto blockquote .accent { color: #e35e37; }
 .expertise_page .exp_manifesto cite,
-.contact_page footer .exp_manifesto cite {
+.contact_page footer .exp_manifesto cite,
+.home_page .exp_manifesto cite {
   display: block;
   margin-top: 18px;
   font-style: normal;
@@ -5001,14 +5004,16 @@ footer .footer_bottom .copyright {
   color: #6b6459;
 }
 .expertise_page .exp_manifesto_copy p,
-.contact_page footer .exp_manifesto_copy p {
+.contact_page footer .exp_manifesto_copy p,
+.home_page .exp_manifesto_copy p {
   font-family: OldschoolGroteskRegular;
   font-size: clamp(15px, 1.1vw, 17px);
   line-height: 1.7;
   color: rgba(18, 25, 33, 0.82);
   max-width: 56ch;
 }
-.expertise_page .exp_manifesto_copy p + p, .contact_page footer .exp_manifesto_copy p + p { margin-top: 16px; }
+.expertise_page .exp_manifesto_copy p + p, .contact_page footer .exp_manifesto_copy p + p, .home_page .exp_manifesto_copy p + p { margin-top: 16px; }
+.home_page .typing_effect_container.exp_manifesto { background: transparent; padding: 0; }
 .expertise_page .exp_manifesto_copy .exp_tags {
   margin-top: 24px;
   display: flex;
