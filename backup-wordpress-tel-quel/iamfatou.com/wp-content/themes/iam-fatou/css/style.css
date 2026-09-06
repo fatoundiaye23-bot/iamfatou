@@ -1021,6 +1021,15 @@ body:not(.about_page, .home_page) header {
 .home_page .sec_3 .wwoman .star svg {
   transform: scale(0);
 }
+.home_page .sec_3_label {
+  text-align: center;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: clamp(11px, 0.85vw, 13px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a8a297;
+}
 .home_page .sec_3 .references {
   margin-top: clamp(14px, 2.9861111111vw, 60px);
   display: grid;
@@ -4931,7 +4940,8 @@ footer .footer_bottom .copyright {
 /* Expertise page eyebrow bar (label — rule — secondary tag) START */
 /* ---------------------------------------------------- */
 .expertise_page .exp_eyebrow,
-.contact_page footer .exp_eyebrow {
+.contact_page footer .exp_eyebrow,
+.home_page .exp_eyebrow {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -4942,11 +4952,15 @@ footer .footer_bottom .copyright {
   text-transform: uppercase;
   color: #121921;
 }
-.expertise_page .exp_eyebrow .rule, .contact_page footer .exp_eyebrow .rule { flex: 1; height: 1px; background-color: rgba(18, 25, 33, 0.15); }
-.expertise_page .exp_eyebrow .secondary, .contact_page footer .exp_eyebrow .secondary { color: #6b6459; white-space: nowrap; }
-.expertise_page .exp_eyebrow.on_ink, .contact_page footer .exp_eyebrow.on_ink { color: #efe6dd; }
-.expertise_page .exp_eyebrow.on_ink .rule, .contact_page footer .exp_eyebrow.on_ink .rule { background-color: rgba(245, 237, 222, 0.18); }
-.expertise_page .exp_eyebrow.on_ink .secondary, .contact_page footer .exp_eyebrow.on_ink .secondary { color: #a8a297; }
+.expertise_page .exp_eyebrow .rule, .contact_page footer .exp_eyebrow .rule, .home_page .exp_eyebrow .rule { flex: 1; height: 1px; background-color: rgba(18, 25, 33, 0.15); }
+.expertise_page .exp_eyebrow .secondary, .contact_page footer .exp_eyebrow .secondary, .home_page .exp_eyebrow .secondary { color: #6b6459; white-space: nowrap; }
+.expertise_page .exp_eyebrow.on_ink, .contact_page footer .exp_eyebrow.on_ink, .home_page .exp_eyebrow.on_ink { color: #efe6dd; }
+.expertise_page .exp_eyebrow.on_ink .rule, .contact_page footer .exp_eyebrow.on_ink .rule, .home_page .exp_eyebrow.on_ink .rule { background-color: rgba(245, 237, 222, 0.18); }
+.expertise_page .exp_eyebrow.on_ink .secondary, .contact_page footer .exp_eyebrow.on_ink .secondary, .home_page .exp_eyebrow.on_ink .secondary { color: #a8a297; }
+.home_page .typing_effect_container .exp_eyebrow {
+  max-width: clamp(674px, 46.8055555556vw, 898.6666666667px);
+  margin: 0 auto 20px;
+}
 /* Expertise page eyebrow bar END */
 
 /* ---------------------------------------------------- */
