@@ -679,7 +679,7 @@ body:not(.about_page, .home_page) header {
   color: #121921;
 }
 .home_page .hero_section.hero_section_cont { padding-top: 0; }
-.home_page .hero_section .typing_effect_container.typing_effect_container_cont { margin-top: clamp(56px, 6vw, 96px); }
+.home_page .hero_section .typing_effect_container.typing_effect_container_cont { margin-top: clamp(56px, 6vw, 96px); margin-bottom: clamp(56px, 6vw, 96px); }
 .home_page .typing_tags {
   margin-top: 24px;
   display: flex;
