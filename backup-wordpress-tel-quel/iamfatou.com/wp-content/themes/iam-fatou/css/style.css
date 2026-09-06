@@ -678,6 +678,37 @@ body:not(.about_page, .home_page) header {
   text-align: right;
   color: #121921;
 }
+.home_page .hero_marquee {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: clamp(56px, 6vw, 96px);
+  background-color: #e35e37;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: clamp(18px, 1.8vw, 26px) 0;
+}
+.home_page .hero_marquee_track {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  animation: home_marquee_scroll 26s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home_page .hero_marquee_track { animation: none; }
+}
+@keyframes home_marquee_scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.home_page .hero_marquee_track span {
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: clamp(15px, 1.5vw, 19px);
+  color: #efe6dd;
+}
+.home_page .hero_marquee_track span b { color: #f7d45a; }
+.home_page .hero_marquee_track span.sep { color: rgba(245, 237, 222, 0.5); font-size: 20px; }
 .home_page .hero_section .typing_effect_container {
   max-width: clamp(674px, 46.8055555556vw, 898.6666666667px);
   width: 100%;
