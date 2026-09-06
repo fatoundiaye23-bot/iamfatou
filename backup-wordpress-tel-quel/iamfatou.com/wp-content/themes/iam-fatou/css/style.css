@@ -704,6 +704,7 @@ body:not(.about_page, .home_page) header {
   gap: 14px;
   max-width: clamp(674px, 46.8055555556vw, 898.6666666667px);
   margin: clamp(32px, 3.5vw, 48px) auto 0;
+  padding-bottom: clamp(56px, 6vw, 96px);
 }
 .home_page .home_hero_ctas .pill_btn.primary { background-color: #f7d45a; color: #121921; }
 .home_page .home_hero_ctas .pill_btn.ghost { border-color: rgba(18, 25, 33, 0.35); color: #121921; }
