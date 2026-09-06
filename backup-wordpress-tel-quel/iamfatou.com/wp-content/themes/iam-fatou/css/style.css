@@ -684,31 +684,25 @@ body:not(.about_page, .home_page) header {
   margin-right: calc(50% - 50vw);
   margin-top: clamp(56px, 6vw, 96px);
   background-color: #e35e37;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: clamp(18px, 1.8vw, 26px) 0;
+  padding: clamp(36px, 4vw, 56px) 20px;
 }
 .home_page .hero_marquee_track {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 28px;
-  animation: home_marquee_scroll 26s linear infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-  .home_page .hero_marquee_track { animation: none; }
-}
-@keyframes home_marquee_scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
 }
 .home_page .hero_marquee_track span {
   font-family: OldschoolGroteskBold;
   font-weight: bold;
-  font-size: clamp(15px, 1.5vw, 19px);
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.3;
   color: #efe6dd;
 }
 .home_page .hero_marquee_track span b { color: #f7d45a; }
-.home_page .hero_marquee_track span.sep { color: rgba(245, 237, 222, 0.5); font-size: 20px; }
+.home_page .hero_marquee_track span.sep { display: none; }
 .home_page .hero_section .typing_effect_container {
   max-width: clamp(674px, 46.8055555556vw, 898.6666666667px);
   width: 100%;
