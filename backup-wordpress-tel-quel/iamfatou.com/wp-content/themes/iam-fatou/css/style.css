@@ -3387,7 +3387,7 @@ footer .contact_intro_links {
   gap: 14px;
   margin-top: 30px;
 }
-.contact_page footer .contact_hero .pill_btn.primary { background-color: #121921; color: var(--main_clr); }
+.contact_page footer .contact_hero .pill_btn.primary { background-color: #121921; color: #efe6dd; }
 .contact_page footer .contact_hero .pill_btn.ghost { border-color: rgba(245, 237, 222, 0.4); color: #efe6dd; }
 .contact_page footer .contact_hero .pill_btn.ghost:hover { border-color: #efe6dd; background: rgba(245, 237, 222, 0.08); }
 .contact_page footer .contact_hero_visual { flex-shrink: 0; }
