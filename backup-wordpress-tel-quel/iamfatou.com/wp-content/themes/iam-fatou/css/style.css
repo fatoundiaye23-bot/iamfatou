@@ -678,6 +678,66 @@ body:not(.about_page, .home_page) header {
   text-align: right;
   color: #121921;
 }
+.home_page .hero_section.hero_section_cont { padding-top: 0; }
+.home_page .typing_effect_container.typing_effect_container_cont { margin-top: clamp(56px, 6vw, 96px); }
+.home_page .typing_tags {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.home_page .typing_tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background-color: #e4d5b4;
+  font-family: OldschoolGroteskBold;
+  font-weight: bold;
+  font-size: 13px;
+  color: #121921;
+}
+.home_page .home_hero_ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: clamp(32px, 3.5vw, 48px);
+}
+.home_page .home_hero_ctas .pill_btn.primary { background-color: #f7d45a; color: #121921; }
+.home_page .home_hero_ctas .pill_btn.ghost { border-color: rgba(18, 25, 33, 0.35); color: #121921; }
+.home_page .home_hero_ctas .pill_btn.ghost:hover { border-color: #121921; background: rgba(18, 25, 33, 0.06); }
+.home_page .exp_stats {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #121921;
+}
+.home_page .exp_stats .container {
+  max-width: clamp(1134px, 78.75vw, 1400px);
+  padding-top: 44px;
+  padding-bottom: 44px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 20px;
+}
+@media screen and (min-width: 720px) {
+  .home_page .exp_stats .container { grid-template-columns: repeat(5, 1fr); }
+}
+.home_page .exp_stats .stat_cell .num {
+  font-family: Tanker;
+  font-weight: normal;
+  font-size: clamp(28px, 3.4vw, 40px);
+  color: #f7d45a;
+  line-height: 1;
+}
+.home_page .exp_stats .stat_cell .lbl {
+  margin-top: 8px;
+  font-family: OldschoolGroteskMedium;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #a8a297;
+  max-width: 20ch;
+}
 .home_page .hero_marquee {
   width: 100vw;
   margin-left: calc(50% - 50vw);
