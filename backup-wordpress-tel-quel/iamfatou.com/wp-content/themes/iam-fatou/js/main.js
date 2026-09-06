@@ -106,6 +106,19 @@ window.addEventListener("load", function () {
   };
   this.window.animateFadeUp();
 
+  if (homeBody.classList.contains("home_page") && document.querySelector(".hero_marquee")) {
+    gsap.to(".social_media", {
+      opacity: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".hero_marquee",
+        start: "top bottom",
+        end: "top center",
+        scrub: true,
+      },
+    });
+  }
+
   // toggle mobile menu
   let menuBtn = this.document.querySelector(".close_icon");
   menuBtn.addEventListener("click", () => {
