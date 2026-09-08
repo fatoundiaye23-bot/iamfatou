@@ -5126,6 +5126,12 @@ footer .footer_bottom .copyright {
   line-height: 1.55;
   color: #a8a297;
 }
+.expertise_page .exp_showup_cta {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+.expertise_page .exp_showup .pill_btn.primary { background-color: var(--main_clr) !important; color: #121921 !important; }
 .expertise_page .exp_showup_note,
 .contact_page footer .exp_showup_note {
   margin-top: 28px;
