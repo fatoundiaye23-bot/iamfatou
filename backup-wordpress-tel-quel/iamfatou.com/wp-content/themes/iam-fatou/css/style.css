@@ -5534,6 +5534,11 @@ footer .footer_bottom .copyright {
 .expertise_page .wonders .offers_band .offer_card p {
   color: #a8a297;
 }
+.expertise_page .wonders .offers_band .offers_cta {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
 
 /* ---------------------------------------------------- */
 /* Subscribe success popup (newsletter / waitlist forms) */
